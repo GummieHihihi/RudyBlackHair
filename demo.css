@@ -82,7 +82,7 @@
 
 	#bodyWithComercial{
 		text-align: center;
-		background-color: red;
+		background-color: white;
 	}
 	#sotreInStore{
 		text-align: center;
@@ -222,7 +222,10 @@
 		text-align: left;
 		text-decoration: none;
 	}
-
+	
+	.SaleCountdownProduct li b{
+		text-align: left;
+	}
 
 
 	.TypicalProductProperties{
@@ -240,6 +243,7 @@
 
 	.TypicalProductProperties li {
 		float: left;
+		text-align: left;
 		
 	}
 
@@ -249,5 +253,33 @@
 		text-align: left;
 		text-decoration: none;
 	}
+	.SaleCountdownProduct img{
+		align-self: right;
+		float: left;
+	}
+	.SaleCountdownProduct{
+		float: left;
+		background-color: white;
+	}
+	
+	.SaleCountdownProduct {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
 
+	.SaleCountdownProduct li {
+		float: left;
+		text-align: left;
+		
+	}
+
+	.SaleCountdownProduct li a {
+		display: block;
+		color: white;
+		text-align: left;
+		text-decoration: none;
+	}
 	
