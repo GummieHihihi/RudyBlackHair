@@ -94,11 +94,346 @@
 	}
 	#coOp{
 		text-align: center;
-		background-color: blue;
+		background-color: white;
 	}
 	#footer{
 		text-align: center;
-		background-color: orange;
+		background-color: white;
+	}
+
+	.headerPropertiesRight{
+		float: right;
+		color : white;
+		text-align: center;
+		padding-top: 20px;
+	}
+	#headerRight{
+		float: right;
+	}
+	.headerPropertiesLeft{
+		float: left;
+		color : white;
+	}
+	.headerImg{
+		float: left;
+
+	}
+	.searchAreaProperty{
+		float: left;
+	}
+	.searchAreainput input[type=text] {
+		float: left;
+		padding: 5px;
+		margin-top: 35px;
+		border: 1px solid black;
+		font-size: 20px;
+		width: 60%;
+	}
+	.searchAreainput button{
+		font-size: 25px;
+		float: left;
+		background-color: black;
+		width: 70px;
+		margin-top: 34px;
+	}
+	.contatctInSearch{
+		padding-top: 20px;
+	}
+	.navigatorProperties{
+		background-color: white;
+	}
+	
+	.navigatorProperties {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.navigatorProperties li {
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	.navigatorProperties li a {
+		display: block;
+		color: black;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.certificateProperties li a:hover {
+		background-color: white;
+	}
+
+	
+	.certificateProperties {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.certificateProperties li {
+		float: left;
+		
+	}
+
+	.certificateProperties li a {
+		display: block;
+		color: black;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.certificateProperties li a:hover {
+		background-color: white;
+	}
+	.productNavigatorLeft{
+		float: left;
+		background-color: black;
+	}
+	
+	.productNavigatorLeft{
+		background-color: black;
+	}
+	
+	.productNavigatorLeft {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: black;
+	}
+
+	.productNavigatorLeft li {
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	.productNavigatorLeft li a {
+		display: block;
+		color: white;
+		text-align: left;
+		text-decoration: none;
+	}
+	
+	.SaleCountdownProduct li b{
+		text-align: left;
+	}
+
+
+	.TypicalProductProperties{
+		float: left;
+		background-color: white;
+	}
+	
+	.TypicalProductProperties {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.TypicalProductProperties li {
+		float: left;
+		text-align: left;
+		
+	}
+
+	.TypicalProductProperties li a {
+		display: block;
+		color: white;
+		text-align: left;
+		text-decoration: none;
+	}
+	.SaleCountdownProduct img{
+		align-self: right;
+		float: left;
+	}
+	.SaleCountdownProduct{
+		float: left;
+		background-color: white;
+	}
+	
+	.SaleCountdownProduct {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.SaleCountdownProduct li {
+		float: left;
+		text-align: left;
+		
+	}
+
+	.SaleCountdownProduct li a {
+		display: block;
+		color: white;
+		text-align: left;
+		text-decoration: none;
+	}
+	
+	#linkViewMore {
+		text-align: right;
+	}
+
+	#linkViewMore a{
+		text-decoration-color: black;
+	}
+
+
+
+	.ShopByCategoriesRow{
+		float: left;
+		background-color: white;
+	}
+	
+	.ShopByCategoriesRow {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.ShopByCategoriesRow li {
+		float: left;
+		text-align: center;
+		
+	}
+
+	.feedbackProperties{
+		float: left;
+		background-color: white;
+	}
+	
+	.feedbackProperties {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.feedbackProperties li {
+		float: left;
+		text-align: left;
+		
+	}
+	.feedbackProperties li a{
+		display: block;
+		color: black;
+		text-align: left;
+		text-decoration: none;
+		
+		#theBigOne {
+		text-align: center;
+		Background-color: white;
+	}
+	#bigDivOnTheLeft {
+		text-align: center;
+		background-color : white;
+		float: left;
+	}
+	#bigDivOnTheRight {
+		text-align: center;
+		background-color : white;
+		float: right;
+
+	}
+	#bigDivInTheMiddel {		
+		background-color:white ;
+		float: left;
+	}
+	#header{
+		
+		width: 100%;
+		margin : 0;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	#leftSideInMain{
+		background-color : white;
+		text-align: center;
+		float: left;
+	}
+	#rightSideInMain{
+		background-color : white;
+		text-align: center;
+		float: right;
+	}
+	#theSmallMiddle{
+		text-align: center;
+		float: left;
+		background-color: white;
+	}
+
+	#theShockingComercial{
+		text-align: center;
+		background-color: pink;
+		color: white;
+		height: auto;
+		padding-top: 10px;
+	}
+
+	#searchSection{
+		text-align: center;
+		background-color: white;
+	}
+	#navigator{
+		text-align: center;
+		background-color: white;
+	}
+
+	#welcomeSlider{
+		text-align: center;
+		background-color: white;
+	}
+	#Certificate{
+		text-align: center;
+		background-color: white;
+	}
+	#productNavigator{
+		text-align: center;
+		background-color: black;
+	}
+	#typicalProduct{
+		text-align: center;
+		background-color: white;
+	}
+	#offComercial{
+		text-align: center;
+		background-color: white;
+		margin-bottom : 20px;
+	}
+
+	#bodyWithComercial{
+		text-align: center;
+		background-color: white;
+	}
+	#storeInStore{
+		text-align: center;
+		background-color: white;
+	}
+	#feedBack{
+		text-align: center;
+		background-color: white;
+	}
+	#coOp{
+		text-align: center;
+		background-color: white;
+	}
+	#footer{
+		text-align: center;
+		background-color: white;
 	}
 
 	.headerPropertiesRight{
