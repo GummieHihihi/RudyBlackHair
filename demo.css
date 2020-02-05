@@ -84,9 +84,9 @@
 		text-align: center;
 		background-color: white;
 	}
-	#sotreInStore{
+	#storeInStore{
 		text-align: center;
-		background-color: green;
+		background-color: white;
 	}
 	#feedBack{
 		text-align: center;
@@ -283,3 +283,57 @@
 		text-decoration: none;
 	}
 	
+	#linkViewMore {
+		text-align: right;
+	}
+
+	#linkViewMore a{
+		text-decoration-color: black;
+	}
+
+
+
+	.ShopByCategoriesRow{
+		float: left;
+		background-color: white;
+	}
+	
+	.ShopByCategoriesRow {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.ShopByCategoriesRow li {
+		float: left;
+		text-align: center;
+		
+	}
+
+	.feedbackProperties{
+		float: left;
+		background-color: white;
+	}
+	
+	.feedbackProperties {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.feedbackProperties li {
+		float: left;
+		text-align: left;
+		
+	}
+	.feedbackProperties li a{
+		display: block;
+		color: black;
+		text-align: left;
+		text-decoration: none;
+		
+	}
