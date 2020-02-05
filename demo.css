@@ -2,22 +2,22 @@
 		text-align: center;
 		Background-color: white;
 	}
-	#bigDivOnTheLeft {
+	.bigDivOnTheLeft {
 		text-align: center;
 		background-color : white;
 		float: left;
 	}
-	#bigDivOnTheRight {
+	.bigDivOnTheRight {
 		text-align: center;
 		background-color : white;
 		float: right;
 
 	}
-	#bigDivInTheMiddel {		
+	.bigDivInTheMiddel {		
 		background-color:white ;
 		float: left;
 	}
-	#header{
+	.header{
 		
 		width: 100%;
 		margin : 0;
@@ -25,7 +25,7 @@
 		padding-top: 0;
 	}
 
-	#leftSideInMain{
+	.leftSideInMain{
 		background-color : white;
 		text-align: center;
 		float: left;
@@ -35,46 +35,50 @@
 		text-align: center;
 		float: right;
 	}
-	#theSmallMiddle{
+	.theSmallMiddle{
 		text-align: center;
 		float: left;
 		background-color: white;
 	}
 
-	#theShockingComercial{
+	.theShockingComercial{
 		text-align: center;
 		background-color: pink;
 		color: white;
 		height: 50px;
 		padding-top: 10px;
 	}
-
-	#searchSection{
-		text-align: center;
-		background-color: white;
-	}
-	#navigator{
-		text-align: center;
-		background-color: white;
+	.theShockingComercial a : hover{
+		text-decoration: none;
+		color: white;
 	}
 
-	#welcomeSlider{
+	.searchSection{
 		text-align: center;
 		background-color: white;
 	}
-	#Certificate{
+	.navigator{
 		text-align: center;
 		background-color: white;
 	}
-	#productNavigator{
+
+	.welcomeSlider{
+		text-align: center;
+		background-color: white;
+	}
+	.Certificate{
+		text-align: center;
+		background-color: white;
+	}
+	.productNavigator{
 		text-align: center;
 		background-color: black;
 	}
-	#typicalProduct{
+	.typicalProduct{
 		text-align: center;
 		background-color: white;
 	}
-	#offComercial{
+	.offComercial{
 		text-align: center;
 		background-color: white;
 		margin-bottom : 20px;
@@ -84,19 +88,19 @@
 		text-align: center;
 		background-color: white;
 	}
-	#storeInStore{
+	.storeInStore{
 		text-align: center;
 		background-color: white;
 	}
-	#feedBack{
+	.feedBack{
 		text-align: center;
 		background-color: white;
 	}
-	#coOp{
+	.coOp{
 		text-align: center;
 		background-color: white;
 	}
-	#footer{
+	.footer{
 		text-align: center;
 		background-color: white;
 	}
@@ -105,14 +109,16 @@
 		float: right;
 		color : white;
 		text-align: center;
-		padding-top: 20px;
+		margin-bottom: 10px;
+		
 	}
-	#headerRight{
+	.headerRight{
 		float: right;
 	}
 	.headerPropertiesLeft{
 		float: left;
 		color : white;
+		margin-top: 15px;
 	}
 	.headerImg{
 		float: left;
@@ -280,11 +286,11 @@
 		text-decoration: none;
 	}
 	
-	#linkViewMore {
+	.linkViewMore {
 		text-align: right;
 	}
 
-	#linkViewMore a{
+	.linkViewMore a{
 		text-decoration-color: black;
 	}
 
@@ -332,27 +338,27 @@
 		color: black;
 		text-align: left;
 		text-decoration: none;
-		
-		#theBigOne {
+		}
+		.theBigOne {
 		text-align: center;
 		Background-color: white;
 	}
-	#bigDivOnTheLeft {
+	.bigDivOnTheLeft {
 		text-align: center;
 		background-color : white;
 		float: left;
 	}
-	#bigDivOnTheRight {
+	.bigDivOnTheRight {
 		text-align: center;
 		background-color : white;
 		float: right;
 
 	}
-	#bigDivInTheMiddel {		
+	.bigDivInTheMiddel {		
 		background-color:white ;
 		float: left;
 	}
-	#header{
+	.header{
 		
 		width: 100%;
 		margin : 0;
@@ -360,23 +366,23 @@
 		padding-top: 0;
 	}
 
-	#leftSideInMain{
+	.leftSideInMain{
 		background-color : white;
 		text-align: center;
 		float: left;
 	}
-	#rightSideInMain{
+	.rightSideInMain{
 		background-color : white;
 		text-align: center;
 		float: right;
 	}
-	#theSmallMiddle{
+	.theSmallMiddle{
 		text-align: center;
 		float: left;
 		background-color: white;
 	}
 
-	#theShockingComercial{
+	.theShockingComercial{
 		text-align: center;
 		background-color: pink;
 		color: white;
@@ -415,7 +421,7 @@
 		margin-bottom : 20px;
 	}
 
-	#bodyWithComercial{
+	.bodyWithComercial{
 		text-align: center;
 		background-color: white;
 	}
@@ -442,7 +448,7 @@
 		text-align: center;
 		padding-top: 20px;
 	}
-	#headerRight{
+	.headerRight{
 		float: right;
 	}
 	.headerPropertiesLeft{
@@ -489,12 +495,13 @@
 	.navigatorProperties li {
 		float: left;
 		margin-bottom: 20px;
+		align-items: left;
 	}
 
 	.navigatorProperties li a {
 		display: block;
 		color: black;
-		text-align: center;
+		text-align: left;
 		text-decoration: none;
 	}
 
@@ -620,6 +627,7 @@
 	
 	#linkViewMore {
 		text-align: right;
+		clear : both;F
 	}
 
 	#linkViewMore a{
@@ -628,12 +636,12 @@
 
 
 
-	.ShopByCategoriesRow{
+	.storeInStoreProperties{
 		float: left;
 		background-color: white;
 	}
 	
-	.ShopByCategoriesRow {
+	.storeInStoreProperties {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -641,7 +649,7 @@
 		background-color: white;
 	}
 
-	.ShopByCategoriesRow li {
+	.storeInStoreProperties li {
 		float: left;
 		text-align: center;
 		
@@ -671,4 +679,26 @@
 		text-align: left;
 		text-decoration: none;
 		
+	}
+
+	.footerResearch{
+		text-align: left;
+	}
+
+	.footerResearch input{
+		float: left;
+		padding: 5px;
+		margin-top: 15px;
+		border: 1px solid black;
+		font-size: 15px;
+		width: 30%;
+	}
+
+	.footerResearch .mailButton{
+		font-size: 13px;
+		float: left;
+		background-color: black;
+		width: 60px;
+		margin-top: 10px;
+		color : white;
 	}
