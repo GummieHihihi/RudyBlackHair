@@ -1,15 +1,11 @@
-	#theBigOne {
-		text-align: center;
+	.theDivContainAll {
 		Background-color: white;
+		width: 100%
 	}
 	.bigDivOnTheLeft {
-		text-align: center;
-		background-color : white;
 		float: left;
 	}
 	.bigDivOnTheRight {
-		text-align: center;
-		background-color : white;
 		float: right;
 
 	}
@@ -30,12 +26,12 @@
 		text-align: center;
 		float: left;
 	}
-	#rightSideInMain{
+	.rightSideInMain{
 		background-color : white;
 		text-align: center;
 		float: right;
 	}
-	.theSmallMiddle{
+	.main{
 		text-align: center;
 		float: left;
 		background-color: white;
@@ -46,7 +42,8 @@
 		background-color: pink;
 		color: white;
 		height: 50px;
-		padding-top: 10px;
+		padding-top: 10px;\
+		width: 100%;
 	}
 	.theShockingComercial a : hover{
 		text-decoration: none;
@@ -56,6 +53,7 @@
 	.searchSection{
 		text-align: center;
 		background-color: white;
+		width: 100%;
 	}
 	.navigator{
 		text-align: center;
@@ -69,40 +67,49 @@
 	.Certificate{
 		text-align: center;
 		background-color: white;
+		width: 100%;
 	}
 	.productNavigator{
 		text-align: center;
 		background-color: black;
+		width: 100%;
 	}
 	.typicalProduct{
 		text-align: center;
 		background-color: white;
+		width: 100%;
 	}
-	.offComercial{
+	.SalesComercial{
 		text-align: center;
 		background-color: white;
 		margin-bottom : 20px;
+		width: 100%;
 	}
 
-	#bodyWithComercial{
+	.bodyWithComercial{
 		text-align: center;
 		background-color: white;
 	}
 	.storeInStore{
 		text-align: center;
 		background-color: white;
+		width: 100%;
 	}
 	.feedBack{
 		text-align: center;
 		background-color: white;
+		width: 100%;
 	}
-	.coOp{
+	.feature{
 		text-align: center;
 		background-color: white;
+		width: 100%;
 	}
 	.footer{
-		text-align: center;
+		text-align: left;
 		background-color: white;
+		margin-top: 20px;
+		width: 100%;
 	}
 
 	.headerPropertiesRight{
@@ -147,6 +154,7 @@
 	}
 	.navigatorProperties{
 		background-color: white;
+		width: 100%;
 	}
 	
 	.navigatorProperties {
@@ -160,6 +168,8 @@
 	.navigatorProperties li {
 		float: left;
 		margin-bottom: 20px;
+		height: 100%;
+
 	}
 
 	.navigatorProperties li a {
@@ -167,6 +177,7 @@
 		color: black;
 		text-align: center;
 		text-decoration: none;
+		align-items: center;
 	}
 
 	.certificateProperties li a:hover {
@@ -180,6 +191,7 @@
 		padding: 0;
 		overflow: hidden;
 		background-color: white;
+		width: 100%;
 	}
 
 	.certificateProperties li {
@@ -288,6 +300,7 @@
 	
 	.linkViewMore {
 		text-align: right;
+		width: 100%;
 	}
 
 	.linkViewMore a{
@@ -318,19 +331,19 @@
 	.feedbackProperties{
 		float: left;
 		background-color: white;
+		width: 100%;
 	}
 	
 	.feedbackProperties {
 		list-style-type: none;
-		margin: 0;
-		padding: 0;
+		
 		overflow: hidden;
 		background-color: white;
 	}
 
 	.feedbackProperties li {
 		float: left;
-		text-align: left;
+		text-align: center;
 		
 	}
 	.feedbackProperties li a{
@@ -364,6 +377,7 @@
 		margin : 0;
 		margin-top: 0;
 		padding-top: 0;
+		background-color: black;
 	}
 
 	.leftSideInMain{
@@ -388,24 +402,31 @@
 		color: white;
 		height: auto;
 		padding-top: 10px;
+		width: 100%
 	}
 
-	#searchSection{
+	.searchSection{
 		text-align: center;
 		background-color: white;
+		width: 100%;
+		margin-bottom: :15px;
 	}
-	#navigator{
+	.navigator{
 		text-align: center;
 		background-color: white;
+		width: 100%;
+
 	}
 
-	#welcomeSlider{
+	.welcomeSlider{
 		text-align: center;
 		background-color: white;
+		width: 100%;
 	}
-	#Certificate{
+	.Certificate{
 		text-align: center;
 		background-color: white;
+		width: 100%;
 	}
 	#productNavigator{
 		text-align: center;
@@ -425,19 +446,21 @@
 		text-align: center;
 		background-color: white;
 	}
-	#storeInStore{
+	.storeInStore{
 		text-align: center;
 		background-color: white;
 	}
-	#feedBack{
+	.feedBack{
 		text-align: center;
 		background-color: white;
 	}
-	#coOp{
+	.feature{
 		text-align: center;
 		background-color: white;
+		margin-top : 20px;
+		width: 100%;
 	}
-	#footer{
+	.footer{
 		text-align: center;
 		background-color: white;
 	}
@@ -670,8 +693,7 @@
 
 	.feedbackProperties li {
 		float: left;
-		text-align: left;
-		
+		text-align: center;
 	}
 	.feedbackProperties li a{
 		display: block;
@@ -701,4 +723,28 @@
 		width: 60px;
 		margin-top: 10px;
 		color : white;
+	}
+
+	.ShopByCategoryRow li{
+		float : left;
+		margin : 0px;
+		padding : 0px;
+	}
+	.rightBodyWithCommercial{
+		align-items: center;
+
+	}
+	.footerRight{
+		text-align: right;	
+		float: right;	
+	}
+	.footerLeft{
+		float: left;
+	}
+	.addToCartButton{
+		clear: both;
+		width: 100%;
+		background-color: red;
+		height: 40px;
+		color: white;
 	}
