@@ -14,11 +14,7 @@
 		float: left;
 	}
 	.header{
-		
 		width: 100%;
-		margin : 0;
-		margin-top: 0;
-		padding-top: 0;
 	}
 
 	.leftSideInMain{
@@ -146,7 +142,7 @@
 		font-size: 25px;
 		float: left;
 		background-color: black;
-		width: 70px;
+		width: 396px;
 		margin-top: 34px;
 	}
 	.contatctInSearch{
@@ -196,7 +192,6 @@
 
 	.certificateProperties li {
 		float: left;
-		
 	}
 
 	.certificateProperties li a {
@@ -428,15 +423,15 @@
 		background-color: white;
 		width: 100%;
 	}
-	#productNavigator{
+	.productNavigator{
 		text-align: center;
 		background-color: black;
 	}
-	#typicalProduct{
+	.typicalProduct{
 		text-align: center;
 		background-color: white;
 	}
-	#offComercial{
+	.offComercial{
 		text-align: center;
 		background-color: white;
 		margin-bottom : 20px;
@@ -446,10 +441,7 @@
 		text-align: center;
 		background-color: white;
 	}
-	.storeInStore{
-		text-align: center;
-		background-color: white;
-	}
+	
 	.feedBack{
 		text-align: center;
 		background-color: white;
@@ -748,3 +740,12 @@
 		height: 40px;
 		color: white;
 	}
+	.bigDivInTheMiddel{
+		width: 100%;
+	}
+	.shockkingComercialRight{
+		float: right;
+		color: white;
+	}
+
+	
