@@ -1,0 +1,378 @@
+.theDivContainAll{
+	max-width: 1280px;
+	margin : auto;
+}
+.header{
+	height: 257px;
+	width: 1280px;
+	background-color: white;
+	align-content: center;
+}
+
+.BigNavigator{
+	width: 100%;
+	height: 55px;
+	background-color: black;
+}
+.BigNavigatorLeft{
+	float: left;
+}
+.BigNavigatorLeftContent{
+	background-color: black;
+	color: white;
+	width: 308px;
+	height: 17,5px;
+	float: left;
+	
+	margin-bottom: 9,5px;
+	margin-left: 55px;
+
+}
+.BigNavigatorRightProperties{
+	width: 114px;
+	height: 16px;
+	float: right;
+	color: white;
+}
+.ShockingComercial{
+	
+	width: 1170px;
+	align-self: center;
+	background-color: pink;
+	clear: both;
+	margin: auto;
+}
+.ShockingComercialLeft{
+	color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 20px;
+	float: left;
+	}.ShockingComercialRight{
+		float: right;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-right: 44px;
+	}
+
+	#SearchInput{
+		float: left;
+		width: 332px;
+		height: 41px;
+		margin-top: 35px;
+		border : 1px solid black;
+
+	}
+	.LogoImage{
+		margin-left: 46px;
+	}
+	.SearchArea{
+		width: 1170px;
+		margin:auto;
+	}
+
+	.contactArea{
+		float: right;
+		text-align: right;
+		margin:50px;
+	}
+	.searchAreainput input[type=text] {
+		float: left;
+		padding: 5px;
+		margin-top: 35px;
+		border: 1px solid black;
+		font-size: 20px;
+		width: 60%;
+	}
+
+	.searchAreainput button{
+		font-size: 25px;
+		float: left;
+		background-color: black;
+		width: 55px;
+		margin-top: 34px;
+	}
+	.contatctInSearch{
+
+	}
+	.searchAreaProperty{
+		float: left;
+	}
+	.ProductNavigator{
+		width :100%;
+	}
+	.navigatorProperties li {
+		float: left;
+		margin-bottom: 20px;
+		height: 100%;
+
+	}
+	.navigatorProperties li a {
+		display: block;
+		color: black;
+		text-align: center;
+		text-decoration: none;
+		align-items: center;
+	}
+	.navigatorProperties{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+	.body{
+		width: 1262px;
+		margin:auto;
+		margin-left: 45px;
+		margin-right: 47px;
+	}
+	.Slider{
+		width: 1170px;
+		height: 493px;
+
+	}
+	.Certificate{
+		width: 1102px;
+		margin:auto;
+		height: 113px;
+	}
+
+	.CertificateProperties li {
+		float: left;
+		height: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.CertificateProperties li a {
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		align-items: center;
+	}
+	.CertificateProperties{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: white;
+	}
+	.subNavigator{
+		width: 100%;
+		height: 57px;
+		clear: both;
+		margin-top: 25px;
+		background-color: black;
+	}
+	.SubNavigatorLeft{
+		float: left;
+	}
+	
+	.SubNavigatorLeftProperties{
+		color: white;
+		margin-top: 19.5px;
+	}
+	.SubNavigatorLeftProperties a{
+		color: white;
+	}
+	
+	.SubNavigatorRight li {
+		float: left;
+		height: 100%;
+		display: block;
+		margin-top: 21px;
+
+	}
+	.SubNavigatorRight li a {
+		
+		text-align: center;
+		text-decoration: none;
+		align-items: center;
+		color: white;
+	}
+	.SubNavigatorRight{
+		list-style-type: none;
+		color: white;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: black;
+	}
+	
+	.ProductInCategories{
+		width: 1170px;
+		height: 57px;
+		background-color: yellow;
+	}
+	.ProductInCategoriesProperties{
+		width: 278px;
+		height: 413px;
+		float: left;
+		background-color: green;
+	}
+	.ProductHot{
+		width: 1170px;
+	}
+	.ProductList{
+		width: 1170px;
+	}
+	.ProductListProperties{
+		float: left;
+	}
+	.addToCartButton{
+		color: white;
+		clear: both;
+		width: 100%;
+		background-color: red;
+		height: 40px;
+		
+	}
+	.ProductImgHot{
+		width: 278px;
+		height: 278px;
+	}
+	.viewMoreLink{
+		text-align: right;
+		width: 100%;
+		float: right;
+		clear: both;
+		margin-bottom: 20px;
+	}
+	.manualSales{
+		
+	}
+	.bodyWithComercial{
+		width: 1170px;
+	}
+	.bodyWithComercial_leftSide{
+		float: left;
+		margin-top: 50px;
+	}
+	.bodyWithComercialTitle{
+		width: 875px;
+		height: 45px;
+	}
+	.bodyWithComercial_rightSide{
+		float: right;
+		margin-top: 50px;
+	}
+	.bodyWithComercial_rightSide img{
+		width: 277px;
+		height: 1285px;
+	}
+	.onSaleWithTimeCountDown{
+		width: 875px;
+		height: 461px;
+		clear: both;
+	}
+	.OnSaleImg{
+		width: 100%;
+		float: left;
+		height: 278px;
+	}
+	.onSaleWithTimeCountDown div{
+		text-align: left;
+	}
+	.OnSaleDescription{
+		clear: both;
+	}
+	.OnSaleDescription img{
+		clear: both;
+		float: left;
+		width: 99px;
+		height: 25px;
+	}
+	.viewMoreLink2{
+		text-align: right;
+		width: 100%;
+		float: right;
+		clear: both;
+		margin-bottom: 20px;
+	}
+	.ShopByCategoriesTitle{
+		margin-left: 230px;
+	}
+	.ShopByCategoriesTitle img{
+		margin-left: 170px;
+	}
+	.ShopByCategoriesProperties{
+		width: 100%;
+		margin-top: 20px;
+	}
+	.ShopByCategoriesDescription{
+		clear: both;
+		text-align: center;
+		margin-top: 10px;
+	}
+	.StoreInStore{
+		clear: both;
+		width: 1262px;
+	}
+	.StoreInStoreTitle{
+		margin-top: 40px;
+	}
+	.StoreInStoreTitle img{
+		margin-left: 640px;
+		margin-bottom: 20px;
+	}
+	.StoreInStoreBody{
+		clear: both;
+	}
+	.StoreInStoreBody div{
+		float: left;
+		margin-bottom: 30px;
+	}
+
+	.FeedBack{
+		clear: both;
+		width: 1262px;
+	}
+	.FeedBackTitle{
+		margin-top: 40px;
+	}
+	.FeedBackTitle img{
+		margin-left: 607px;
+	}
+	.FeedBackBody{
+		clear: both;
+	}
+	.FeedBackBody div{
+		float: left;
+	}
+	.feedbackimg{
+		height: 280px;
+	}
+	.Feature{
+		clear: both;
+		width: 1262px;
+	}
+	.FeatureTitle{
+		margin-left: 55px;
+	}
+	.FeatureTitleImg{
+		margin-left: 55px;
+	}
+	.footer{
+		width: 1280px;
+		margin-top: 50px;
+		margin:auto;
+	}
+	.footerRight{
+		float: right;
+		text-align: left;
+	}
+	.footerLeft{
+		float: left;
+	}
+	.footerRight input{
+		width: 376px;
+		height: 58px;
+	}
+	.footerRight button{
+		width: 99px;
+		height: 58px;
+		background-color: black;
+		color: white;
+		margin-left: 0px;
+	}
+
