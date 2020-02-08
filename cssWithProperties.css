@@ -312,7 +312,7 @@
 		margin-top: 40px;
 	}
 	.StoreInStoreTitle img{
-		margin-left: 640px;
+		margin-left: 590px;
 		margin-bottom: 20px;
 	}
 	.StoreInStoreBody{
@@ -353,9 +353,10 @@
 		margin-left: 55px;
 	}
 	.footer{
-		width: 1280px;
-		margin-top: 50px;
+		width: 1262px;
+		margin-top: 70px;
 		margin:auto;
+		margin-bottom: 30px;
 	}
 	.footerRight{
 		float: right;
@@ -363,9 +364,10 @@
 	}
 	.footerLeft{
 		float: left;
+		padding-left: 50px;
 	}
 	.footerRight input{
-		width: 376px;
+		width: 479px;
 		height: 58px;
 	}
 	.footerRight button{
