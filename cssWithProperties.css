@@ -1,23 +1,23 @@
-.theDivContainAll{
-	max-width: 1280px;
+.thedivcontainall{
+	width: 1280px;
 	margin : auto;
 }
 .header{
-	height: 257px;
-	width: 1280px;
+	width: 100%;
 	background-color: white;
 	align-content: center;
+	margin:auto;
 }
 
-.BigNavigator{
+.bignavigator{
 	width: 100%;
 	height: 55px;
 	background-color: black;
 }
-.BigNavigatorLeft{
+.bignavigatorleft{
 	float: left;
 }
-.BigNavigatorLeftContent{
+.bignavigatorleftcontent{
 	background-color: black;
 	color: white;
 	width: 308px;
@@ -28,27 +28,28 @@
 	margin-left: 55px;
 
 }
-.BigNavigatorRightProperties{
+.nignavigatorrightproperties{
 	width: 114px;
 	height: 16px;
 	float: right;
 	color: white;
 }
-.ShockingComercial{
+.shockingcomercial{
 	
-	width: 1170px;
+	width: 93%;
 	align-self: center;
 	background-color: pink;
 	clear: both;
 	margin: auto;
 }
-.ShockingComercialLeft{
+.shockingcomercialleft{
 	color: white;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	margin-left: 20px;
 	float: left;
-	}.ShockingComercialRight{
+	}
+	.shockingcomercialright{
 		float: right;
 		margin-top: 15px;
 		margin-bottom: 15px;
@@ -66,7 +67,7 @@
 	.LogoImage{
 		margin-left: 46px;
 	}
-	.SearchArea{
+	.searcharea{
 		width: 1170px;
 		margin:auto;
 	}
@@ -76,7 +77,7 @@
 		text-align: right;
 		margin:50px;
 	}
-	.searchAreainput input[type=text] {
+	.searchareainput input[type=text] {
 		float: left;
 		padding: 5px;
 		margin-top: 35px;
@@ -85,36 +86,37 @@
 		width: 60%;
 	}
 
-	.searchAreainput button{
+	.searchareainput button{
 		font-size: 25px;
 		float: left;
 		background-color: black;
 		width: 55px;
 		margin-top: 34px;
 	}
-	.contatctInSearch{
-
+	.contactinsearch{
+		clear: both;
+		float: right;
 	}
-	.searchAreaProperty{
+	.searchareaproperties{
 		float: left;
 	}
-	.ProductNavigator{
+	.productnavigator{
 		width :100%;
 	}
-	.navigatorProperties li {
+	.navigatorproperties li {
 		float: left;
 		margin-bottom: 20px;
 		height: 100%;
 
 	}
-	.navigatorProperties li a {
+	.navigatorproperties li a {
 		display: block;
 		color: black;
 		text-align: center;
 		text-decoration: none;
 		align-items: center;
 	}
-	.navigatorProperties{
+	.navigatorproperties{
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -122,75 +124,74 @@
 		background-color: white;
 	}
 	.body{
-		width: 1262px;
+		width: 93%;
 		margin:auto;
-		margin-left: 45px;
-		margin-right: 47px;
+		
 	}
-	.Slider{
+	.slider{
 		width: 1170px;
 		height: 493px;
 
 	}
-	.Certificate{
+	.certificate{
 		width: 1102px;
 		margin:auto;
 		height: 113px;
 	}
 
-	.CertificateProperties li {
+	.certificateproperties li {
 		float: left;
 		height: 100%;
 		text-align: center;
 		margin-bottom: 20px;
 	}
-	.CertificateProperties li a {
+	.certificateproperties li a {
 		display: block;
 		text-align: center;
 		text-decoration: none;
 		align-items: center;
 	}
-	.CertificateProperties{
+	.certificateproperties{
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
 		background-color: white;
 	}
-	.subNavigator{
+	.subnavigator{
 		width: 100%;
 		height: 57px;
 		clear: both;
 		margin-top: 25px;
 		background-color: black;
 	}
-	.SubNavigatorLeft{
+	.subnavigatorleft{
 		float: left;
 	}
 	
-	.SubNavigatorLeftProperties{
+	.subnavigatorleftproperties{
 		color: white;
 		margin-top: 19.5px;
 	}
-	.SubNavigatorLeftProperties a{
+	.subnavigatorleftproperties a{
 		color: white;
 	}
 	
-	.SubNavigatorRight li {
+	.subnavigatorright li {
 		float: left;
 		height: 100%;
 		display: block;
 		margin-top: 21px;
 
 	}
-	.SubNavigatorRight li a {
+	.subnavigatorright li a {
 		
 		text-align: center;
 		text-decoration: none;
 		align-items: center;
 		color: white;
 	}
-	.SubNavigatorRight{
+	.subnavigatorright{
 		list-style-type: none;
 		color: white;
 		margin: 0;
@@ -199,27 +200,17 @@
 		background-color: black;
 	}
 	
-	.ProductInCategories{
-		width: 1170px;
-		height: 57px;
-		background-color: yellow;
-	}
-	.ProductInCategoriesProperties{
-		width: 278px;
-		height: 413px;
-		float: left;
-		background-color: green;
-	}
-	.ProductHot{
+	
+	.producthot{
 		width: 1170px;
 	}
-	.ProductList{
+	.productlist{
 		width: 1170px;
 	}
-	.ProductListProperties{
+	.productlistproperties{
 		float: left;
 	}
-	.addToCartButton{
+	.addtocartbutton{
 		color: white;
 		clear: both;
 		width: 100%;
@@ -227,11 +218,11 @@
 		height: 40px;
 		
 	}
-	.ProductImgHot{
+	.productimghot{
 		width: 278px;
 		height: 278px;
 	}
-	.viewMoreLink{
+	.viewmorelink{
 		text-align: right;
 		width: 100%;
 		float: right;
@@ -241,99 +232,99 @@
 	.manualSales{
 		
 	}
-	.bodyWithComercial{
+	.bodywithcomercial{
 		width: 1170px;
 	}
-	.bodyWithComercial_leftSide{
+	.bodywithcomercial_leftside{
 		float: left;
 		margin-top: 50px;
 	}
-	.bodyWithComercialTitle{
+	.bodywithcomercialtitle{
 		width: 875px;
 		height: 45px;
 	}
-	.bodyWithComercial_rightSide{
+	.bodywithcomercial_rightside{
 		float: right;
 		margin-top: 50px;
 	}
-	.bodyWithComercial_rightSide img{
+	.bodywithcomercial_rightside img{
 		width: 277px;
 		height: 1285px;
 	}
-	.onSaleWithTimeCountDown{
+	.onsalewithtimecountdown{
 		width: 875px;
 		height: 461px;
 		clear: both;
 	}
-	.OnSaleImg{
+	.onsaleimg{
 		width: 100%;
 		float: left;
 		height: 278px;
 	}
-	.onSaleWithTimeCountDown div{
+	.onsalewithtimecountdown div{
 		text-align: left;
 	}
-	.OnSaleDescription{
+	.onsaledescription{
 		clear: both;
 	}
-	.OnSaleDescription img{
+	.onsaledescription img{
 		clear: both;
 		float: left;
 		width: 99px;
 		height: 25px;
 	}
-	.viewMoreLink2{
+	.viewmorelink2{
 		text-align: right;
 		width: 100%;
 		float: right;
 		clear: both;
 		margin-bottom: 20px;
 	}
-	.ShopByCategoriesTitle{
+	.shopbycategoriestitle{
 		margin-left: 230px;
 	}
-	.ShopByCategoriesTitle img{
+	.shopbycategoriestitle img{
 		margin-left: 170px;
 	}
-	.ShopByCategoriesProperties{
+	.shopbycategoriesproperties{
 		width: 100%;
 		margin-top: 20px;
 	}
-	.ShopByCategoriesDescription{
+	.shopbycategoriesdescription{
 		clear: both;
 		text-align: center;
 		margin-top: 10px;
 	}
-	.StoreInStore{
+	.storeinstore{
 		clear: both;
-		width: 1262px;
+		width: 100%;
 	}
-	.StoreInStoreTitle{
+	.storeinstoretitle{
 		margin-top: 40px;
 	}
-	.StoreInStoreTitle img{
+	.storeinstoretitle img{
 		margin-left: 590px;
 		margin-bottom: 20px;
 	}
-	.StoreInStoreBody{
+	.storeinstorebody{
 		clear: both;
 	}
-	.StoreInStoreBody div{
+	.storeinstorebody div{
 		float: left;
 		margin-bottom: 30px;
 	}
 
-	.FeedBack{
+	.feedback{
 		clear: both;
 		width: 1262px;
 	}
-	.FeedBackTitle{
+	.feedbacktitle{
 		margin-top: 40px;
 	}
-	.FeedBackTitle img{
+	.feedbacktitle img{
 		margin-left: 607px;
 	}
-	.FeedBackBody{
+	.feedbackbody{
 		clear: both;
 	}
 	.FeedBackBody div{
@@ -342,35 +333,35 @@
 	.feedbackimg{
 		height: 280px;
 	}
-	.Feature{
+	.feature{
 		clear: both;
 		width: 1262px;
 	}
-	.FeatureTitle{
+	.featuretitle{
 		margin-left: 55px;
 	}
-	.FeatureTitleImg{
+	.featuretitleimg{
 		margin-left: 55px;
 	}
 	.footer{
-		width: 1262px;
+		width: 85%;
 		margin-top: 70px;
 		margin:auto;
 		margin-bottom: 30px;
 	}
-	.footerRight{
+	.footerright{
 		float: right;
 		text-align: left;
 	}
-	.footerLeft{
+	.footerleft{
 		float: left;
 		padding-left: 50px;
 	}
-	.footerRight input{
+	.footerright input{
 		width: 479px;
 		height: 58px;
 	}
-	.footerRight button{
+	.footerright button{
 		width: 99px;
 		height: 58px;
 		background-color: black;
