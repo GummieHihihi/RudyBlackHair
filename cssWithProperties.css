@@ -1,59 +1,55 @@
+
 .thedivcontainall{
-	width: 1280px;
+	width: 100%;
 	margin : auto;
+	padding : unset;
 }
 .header{
-	width: 100%;
 	background-color: white;
 	align-content: center;
 	margin:auto;
+
 }
 
 .bignavigator{
 	width: 100%;
-	height: 55px;
 	background-color: black;
+	padding-top: 15px;
+	margin-bottom: unset;
 }
 .bignavigatorleft{
-	float: left;
+	
 }
 .bignavigatorleftcontent{
 	background-color: black;
 	color: white;
-	width: 308px;
-	height: 17,5px;
-	float: left;
-	
 	margin-bottom: 9,5px;
-	margin-left: 55px;
+	padding-left: 55px;
+	
 
 }
 .nignavigatorrightproperties{
-	width: 114px;
-	height: 16px;
+	text-align : center;
 	float: right;
 	color: white;
 }
 .shockingcomercial{
 	
 	width: 93%;
-	align-self: center;
+	
 	background-color: pink;
 	clear: both;
 	margin: auto;
 }
 .shockingcomercialleft{
 	color: white;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-left: 20px;
+	padding-left: 30px;
 	float: left;
 	}
 	.shockingcomercialright{
 		float: right;
-		margin-top: 15px;
-		margin-bottom: 15px;
-		margin-right: 44px;
+		text-align: right;
+		padding-right: 30px;
 	}
 
 	#SearchInput{
@@ -68,7 +64,7 @@
 		margin-left: 46px;
 	}
 	.searcharea{
-		width: 1170px;
+		width: 93%;
 		margin:auto;
 	}
 
@@ -95,7 +91,7 @@
 	}
 	.contactinsearch{
 		clear: both;
-		float: right;
+		align-self: center;
 	}
 	.searchareaproperties{
 		float: left;
@@ -124,24 +120,25 @@
 		background-color: white;
 	}
 	.body{
-		width: 93%;
+		width: 100%;
+		margin:auto;
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+	.slider img{
+		width: 100%;
 		margin:auto;
 		
-	}
-	.slider{
-		width: 1170px;
-		height: 493px;
 
 	}
 	.certificate{
-		width: 1102px;
+		width: 100%;
 		margin:auto;
-		height: 113px;
+		
 	}
 
 	.certificateproperties li {
 		float: left;
-		height: 100%;
 		text-align: center;
 		margin-bottom: 20px;
 	}
@@ -149,8 +146,13 @@
 		display: block;
 		text-align: center;
 		text-decoration: none;
-		align-items: center;
+		
 	}
+	.certificateproperties li img{
+		width: 151px;
+		height: 110px;
+	}
+
 	.certificateproperties{
 		list-style-type: none;
 		margin: 0;
@@ -181,7 +183,7 @@
 		float: left;
 		height: 100%;
 		display: block;
-		margin-top: 21px;
+		margin-top: 20px;
 
 	}
 	.subnavigatorright li a {
@@ -192,7 +194,6 @@
 		color: white;
 	}
 	.subnavigatorright{
-		list-style-type: none;
 		color: white;
 		margin: 0;
 		padding: 0;
@@ -202,10 +203,12 @@
 	
 	
 	.producthot{
-		width: 1170px;
+		width: 100%;
+		clear: both;
+		
 	}
 	.productlist{
-		width: 1170px;
+		width: 100%;
 	}
 	.productlistproperties{
 		float: left;
@@ -230,36 +233,38 @@
 		margin-bottom: 20px;
 	}
 	.manualSales{
-		
+		width: 100%;
+		margin-left: 15px;
 	}
 	.bodywithcomercial{
-		width: 1170px;
+		width: 100%;
 	}
 	.bodywithcomercial_leftside{
 		float: left;
 		margin-top: 50px;
+		text-align: center;
+		padding : unset;
 	}
 	.bodywithcomercialtitle{
-		width: 875px;
-		height: 45px;
+		margin:auto;
 	}
 	.bodywithcomercial_rightside{
 		float: right;
+		width: 20%;
 		margin-top: 50px;
 	}
 	.bodywithcomercial_rightside img{
-		width: 277px;
-		height: 1285px;
+		width: 100%;
+		
 	}
 	.onsalewithtimecountdown{
-		width: 875px;
-		height: 461px;
+		width: 100%;
 		clear: both;
 	}
 	.onsaleimg{
 		width: 100%;
 		float: left;
-		height: 278px;
+		
 	}
 	.onsalewithtimecountdown div{
 		text-align: left;
@@ -270,7 +275,7 @@
 	.onsaledescription img{
 		clear: both;
 		float: left;
-		width: 99px;
+		
 		height: 25px;
 	}
 	.viewmorelink2{
@@ -281,13 +286,13 @@
 		margin-bottom: 20px;
 	}
 	.shopbycategoriestitle{
-		margin-left: 230px;
+		text-align: center;
 	}
 	.shopbycategoriestitle img{
-		margin-left: 170px;
+		
 	}
 	.shopbycategoriesproperties{
-		width: 100%;
+		
 		margin-top: 20px;
 	}
 	.shopbycategoriesdescription{
@@ -298,13 +303,11 @@
 	.storeinstore{
 		clear: both;
 		width: 100%;
+
 	}
 	.storeinstoretitle{
-		margin-top: 40px;
-	}
-	.storeinstoretitle img{
-		margin-left: 590px;
-		margin-bottom: 20px;
+		margin:auto;
+		text-align: center;
 	}
 	.storeinstorebody{
 		clear: both;
@@ -312,17 +315,23 @@
 	.storeinstorebody div{
 		float: left;
 		margin-bottom: 30px;
+		padding-left: 20px;
 	}
 
 	.feedback{
 		clear: both;
-		width: 1262px;
+		
 	}
 	.feedbacktitle{
 		margin-top: 40px;
+		text-align: center;
+
 	}
 	.feedbacktitle img{
-		margin-left: 607px;
+		margin: auto;
+	}
+	.feedbacktitle h1{
+		margin:auto;
 	}
 	.feedbackbody{
 		clear: both;
@@ -330,12 +339,14 @@
 	.FeedBackBody div{
 		float: left;
 	}
-	.feedbackimg{
-		height: 280px;
+	.feedbackimg {
+		width: 223px;
+		height: 284px;
 	}
+	
 	.feature{
 		clear: both;
-		width: 1262px;
+		width: 100%;
 	}
 	.featuretitle{
 		margin-left: 55px;
@@ -344,7 +355,7 @@
 		margin-left: 55px;
 	}
 	.footer{
-		width: 85%;
+		width: 93%;
 		margin-top: 70px;
 		margin:auto;
 		margin-bottom: 30px;
@@ -368,4 +379,11 @@
 		color: white;
 		margin-left: 0px;
 	}
+	.searchareainput{
+		float: left;
+	}
 
+	.featureimg{
+		width: 144px;
+		height :126px;
+	}
