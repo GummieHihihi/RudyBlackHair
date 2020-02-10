@@ -295,6 +295,10 @@
 		
 		margin-top: 20px;
 	}
+	.shopbycategoriesproperties img{
+		width: 305px;
+		height: 307px;
+	}
 	.shopbycategoriesdescription{
 		clear: both;
 		text-align: center;
