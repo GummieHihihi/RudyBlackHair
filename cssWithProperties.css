@@ -3,6 +3,7 @@
 	width: 100%;
 	margin : auto;
 	padding : unset;
+	
 }
 .header{
 	background-color: white;
@@ -291,7 +292,7 @@
 		
 	}
 	.shopbycategoriesproperties{
-		
+		display: flex;
 		margin-top: 20px;
 	}
 	.shopbycategoriesproperties img{
