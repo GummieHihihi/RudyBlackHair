@@ -416,3 +416,6 @@
   .leftcarousel-control{
   	width: 0;
   }
+  .bodywithcomercial_leftside h1{
+  	float: left;
+  }

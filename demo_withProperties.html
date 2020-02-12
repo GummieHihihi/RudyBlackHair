@@ -20,8 +20,11 @@
 	<link rel="stylesheet" href="/path/to/slick.css">
 	<link rel="stylesheet" href="/path/to/slick-theme.css">
 	<!-- js livrary -->
-	<script src="/path/to/jquery.min.js"></script>
-	<script src="path/to/slick.min.js"></script>
+	<script src="http:/path/to/jquery.min.js"></script>
+	<script src="http:/path/to/slick.min.js"></script>
+	
+	<!-- auto complete library-->
+	
 
 </head>
 <body>
@@ -66,9 +69,9 @@
 				<div class="row">
 					<div class="searchareaproperties col-md-3 col-sm-12 col-xs-6"> <img class="img-responsive" alt="icon" src="image/horny.png"></div>
 					<div class="searchareainput col-md-6 col-sm-12 col-xs-6"> 
+						<!-- input in input-->
+						<input type="text" placeholder="Search the entire shop here" name="searchinput" id="myInput" style="position: relative;" class="">
 
-						<input type="text" placeholder="Search the entire shop here" name="searchinput" id="searchinput" class="form-control">
-						<ul class="list-group" id="result"></ul>
 						<button class="" type="button"><i class="fa fa-search" style="color: white"></i></button>
 					</div>
 					<div class="searchareaproperties col-md-3 col-sm-12 col-xs-12"> 
@@ -234,54 +237,131 @@
 
 			<!-- the bbody with comercial-->
 			<div class="bodywithcomercial row">
+				<!-- left and right of the carousel -->
 				<div class="bodywithcomercial_leftside col-md-9 col-xs-9">
-					<h1 id="countdown"></h1>
-					<div class="onsalewithtimecountdown">
-						<div class="row">
-							<div class="col-md-4 col-xs-4">
-								<div class="onsaleimg">
-									<img src="image/SaleCountDown1.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
-								</div>
-								<div class="onsaledescription">
-									<br>
-									<b>Horny Production</b>
-									<br>Miss Kimochi viberator
-									<span><br>Sakura Eddition<br></span>
-									<b>$36.69 </b><br>
-									<img src="image/4Stars.png" alt="4Star">
-								</div>
-							</div>
-							<div class="col-md-4 col-xs-4">
-								<div class="onsaleimg">
-									<img src="image/SaleCountDown2.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
-								</div>
-								<div class="onsaledescription">
-									<br>
-									<b>Horny Production</b>
-									<br>Miss Kimochi viberator
-									<span><br>Sakura Eddition<br></span>
-									<b>$36.69 </b><br>
-									<img src="image/4Stars.png" alt="4Star">
-								</div>
-							</div>
-							<div class="col-md-4 col-xs-4">
-								<div class="onsaleimg">
-									<img src="image/SaleCountDown3.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
-								</div>
-								<div class="onsaledescription">
-									<br>
-									<b>Horny Production</b>
-									<br>Miss Kimochi viberator
-									<span><br>Sakura Eddition<br></span>
-									<b>$36.69 </b><br>
-									<img src="image/4Stars.png" alt="4Star">
-								</div>
-							</div>
+					<div class="row">
+						<div class="col-md-2" style="float: left;">
+							<a class="left carousel-control" href="#myCarouselonsale" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="sr-only">Previous</span>
+							</a>
 						</div>
-						<div class="viewmorelink2">
-							<a href="">View More -></a>
+						<h1 id="countdown" class="col-md-8"></h1>
+						<div class="col-md-2" style="float: left;">
+							<a class="right carousel-control" href="#myCarouselonsale" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="sr-only">Next</span>
+							</a>
 						</div>
 					</div>
+					<!-- the carousel : start -->
+					<div id="myCarouselonsale" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarouselonsale" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarouselonsale" data-slide-to="1"></li>
+							<li data-target="#myCarouselonsale" data-slide-to="2"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="row">
+									<div class="col-md-4 col-xs-4">
+										<div class="onsaleimg">
+											<img src="image/SaleCountDown1.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
+										</div>
+										<div class="onsaledescription">
+											<br>
+											<b>Horny Production</b>
+											<br>Miss Kimochi viberator
+											<span><br>Sakura Eddition<br></span>
+											<b>$36.69 </b><br>
+											<img src="image/4Stars.png" alt="4Star">
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-4">
+										<div class="onsaleimg">
+											<img src="image/SaleCountDown2.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
+										</div>
+										<div class="onsaledescription">
+											<br>
+											<b>Horny Production</b>
+											<br>Miss Kimochi viberator
+											<span><br>Sakura Eddition<br></span>
+											<b>$36.69 </b><br>
+											<img src="image/4Stars.png" alt="4Star">
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-4">
+										<div class="onsaleimg">
+											<img src="image/SaleCountDown3.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
+										</div>
+										<div class="onsaledescription">
+											<br>
+											<b>Horny Production</b>
+											<br>Miss Kimochi viberator
+											<span><br>Sakura Eddition<br></span>
+											<b>$36.69 </b><br>
+											<img src="image/4Stars.png" alt="4Star">
+										</div>
+									</div>
+								</div>
+								<div class="viewmorelink2">
+									<a href="">View More -></a>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="row">
+									<div class="col-md-4 col-xs-4">
+										<div class="onsaleimg">
+											<img src="image/SaleCountDown1.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
+										</div>
+										<div class="onsaledescription">
+											<br>
+											<b>Horny Production</b>
+											<br>Miss Kimochi viberator
+											<span><br>Sakura Eddition<br></span>
+											<b>$36.69 </b><br>
+											<img src="image/4Stars.png" alt="4Star">
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-4">
+										<div class="onsaleimg">
+											<img src="image/SaleCountDown2.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
+										</div>
+										<div class="onsaledescription">
+											<br>
+											<b>Horny Production</b>
+											<br>Miss Kimochi viberator
+											<span><br>Sakura Eddition<br></span>
+											<b>$36.69 </b><br>
+											<img src="image/4Stars.png" alt="4Star">
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-4">
+										<div class="onsaleimg">
+											<img src="image/SaleCountDown3.png" alt="saleCountDown" class="saleCountdownImg img-responsive">
+										</div>
+										<div class="onsaledescription">
+											<br>
+											<b>Horny Production</b>
+											<br>Miss Kimochi viberator
+											<span><br>Sakura Eddition<br></span>
+											<b>$36.69 </b><br>
+											<img src="image/4Stars.png" alt="4Star">
+										</div>
+									</div>
+								</div>
+								<div class="viewmorelink2">
+									<a href="">View More -></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- start shop by categories-->
 					<div class="shopbycategories">
 						<div class="shopbycategoriestitle">
 							<b><h1>SHOP BY CATEGORIES</h1></b>
