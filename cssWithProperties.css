@@ -17,6 +17,7 @@
 	background-color: black;
 	padding-top: 15px;
 	margin-bottom: unset;
+	margin : auto;
 }
 .bignavigatorleft{
 	
@@ -36,7 +37,7 @@
 }
 .shockingcomercial{
 	
-	width: 93%;
+	width: 92%;
 	
 	background-color: pink;
 	clear: both;
@@ -65,7 +66,7 @@
 	margin-left: 46px;
 }
 .searcharea{
-	width: 93%;
+	width: 92%;
 	margin:auto;
 }
 
@@ -396,26 +397,144 @@
 }
 
 /* Type-1 carousel feature*/
-.multifeature {
-  .carousel-inner .active.left {
-    left: -25%;
-  }
-  .carousel-inner .next {
-    left:  25%;
-  }
-  .carousel-inner .prev {
-    left: -25%;
-  }
-  .carousel-control {
-    width:  4%;
-  }
-  .carousel-control.left, .carousel-control.right {
-    margin-left:15px;
-    background-image:none;
-  }
-  .leftcarousel-control{
-  	width: 0;
-  }
-  .bodywithcomercial_leftside h1{
-  	float: left;
-  }
+
+.headerphone{
+	background-color: white;
+	align-content: center;
+	margin:auto;
+
+}
+.bignavigatorphone{
+	width: 100%;
+	background-color: white;
+	padding-top: 15px;
+	margin-bottom: unset;
+}
+.bignavigatorphone div{
+	float: left;
+}
+.dropdown{
+	background-color: white;
+}
+.buttonsheader i{
+	background-color: white;
+	border : none;
+	font-size: 30px;
+	margin-top: 31px;
+}
+.bignavigatorrightphone{
+	text-align: right;
+}
+.searchbarphone input{
+	width: 80%;
+	margin-top: 20px;
+	font-size: 20px;
+	float: left;
+	border : 1px solid black;
+}
+.searchbarphone button{
+	float: right;
+	width: 20%;
+	font-size: 22px;
+	margin-top: 19px;
+	background-color: black;
+}
+
+.bodyforphone{
+	width: 100%;
+	margin : auto;
+	clear: both;
+}
+.navigatorphone{
+	clear: both;
+	width: 100%;
+}
+.navigatorphone div{
+	text-align: center;
+	border-bottom: 1px solid blue;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.navigatorphone div a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+} 
+.whybuysfromus{
+	width: 100%;
+}
+.whybuytitle{
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	margin:20px;
+}
+.whybuytitle img{
+	margin : auto;
+
+}
+.whybuybody{
+	
+	margin-top: 20px;
+}
+.whybuyleft img{
+	margin : auto;
+}
+.whybuyleft{
+	margin-top : 20px;
+	float: left;
+	text-align: center;
+	background-color: 	#D3D3D3	;
+	margin-left: 40px;
+	width: 158px;
+	height: 158px;
+}
+.whybuyright{
+	margin-top : 20px;
+	float: right;
+	text-align: center;
+	background-color: 	#D3D3D3	;
+	margin-right: 40px;
+	width: 158px;
+	height: 158px;
+}
+.whybuyright img{
+	margin:auto;
+}
+.whybuyleft button{
+	width: 97px;
+	height: 26px;
+	margin-top: 10px
+}
+.whybuyright button{
+	width: 97px;
+	height: 26px;
+	background-color: black;
+	color: white;
+	border : none;
+	margin-top: 10px;
+}
+.popularcategoriestitle{
+	margin:auto;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.popularcategoriestitle img{
+	margin : auto;
+}
+.categoriespropertiesright img{
+	float: right;
+}
+.categoriespropertiescenter img{
+	margin: auto;
+}
+.categoriespropertiesright b{
+	float: right;
+}
+.categoriespropertiescenter b{
+	align-self: center;
+}
