@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width , initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
@@ -12,31 +15,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <!-- java script : my  -->
-  <script src="myJavaScript.js"></script>
   
-  <link href="cssWithProperties.css" rel="stylesheet">
+  <link href="hornyPhone.css" rel="stylesheet">
   <!-- slick js -->
   <link rel="stylesheet" href="/path/to/slick.css">
   <link rel="stylesheet" href="/path/to/slick-theme.css">
   <!-- js livrary -->
   <script src="http:/path/to/jquery.min.js"></script>
   <script src="http:/path/to/slick.min.js"></script>
-    <!-- auto complete library-->
+  <!-- auto complete library-->
   <script type="text/javascript">
     if( screen.width > 560 ) {
       location.href = 'demo_withProperties.html';
-  }
+    }
   </script>
 </head>
 <body>
-      <div class="thedivcontainall container-fluid">
-        <div class="header">
-          <div class="bignavigator navbar row">
-            <div class="bignavigatorLeft col-xs-3">hi</div>
-            <div class="bignavigatorcenter col-xs-6">hi2</div>
-            <div class="bignavigatorright col-xs-3">hi3</div>
+  <!-- the div contain all --> 
+  <div class="thedivcontainall container-fluid">
+    <!-- start of header -->
+    <div class="header">
+      <div class="bignavigator navbar row">
+        <div class="bignavigatorLeft col-xs-4">
+          <div class="navigatorleftleft col-xs-6">
+            <div class="dropdown">
+              <button class="buttonsheader btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                <i style='color: black' class='fas'>&#xf039;</i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="navigatorleftright col-xs-6">
+            <i style='font-size:30px; margin-top: 31px;' class='fas'>&#xf879;</i>
           </div>
         </div>
+        <div class="bignavigatorcenter col-xs-5">
+          <img src="image/horny.png" class="img-responsive">
+        </div>
+        <div class="bignavigatorright col-xs-3">
+          <i style="font-size:30px; margin-top: 31px;" class="fa">&#xf07a;</i>
+        </div>
       </div>
+    </div>
+    <!-- end of header -->
+    <!-- start of search bar -->
+    <div class="searchbar">
+      <input type="text"  placeholder="Search the entire shop here" name="searchinput" id="myInput" style="position: relative;" class="">
+      <button class="" type="button"><i class="fa fa-search" style="color: white"></i></button>
+    </div>
+    <div></div>
+  </div>
 </body>
 </html>
