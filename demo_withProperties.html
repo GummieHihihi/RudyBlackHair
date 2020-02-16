@@ -22,17 +22,8 @@
 	<script src="http:/path/to/jquery.min.js"></script>
 	<script src="http:/path/to/slick.min.js"></script>
 	<!-- auto complete library-->
-	<script type="text/javascript">
-		var text = '{ "name":"John", "birth":"1986-12-14", "city":"New York"}';
-		var obj = JSON.parse(text, function (key) {
-			if (key.name == "ohn") {
-				alert("hello");
-			} else {
-				alert("not hello");
-			}
-		});
-	</script>
-
+	<script src ="autocomplete.js"></script>
+	
 </head>
 
 <body>
@@ -76,12 +67,15 @@
 			<div class="searcharea">
 				<div class="row">
 					<div class="searchareaproperties col-md-3 col-sm-12 col-xs-6"> <img class="img-responsive" alt="icon" src="image/horny.png"></div>
+
 					<div class="searchareainput col-md-6 col-sm-12 col-xs-6"> 
 						<!-- input in input-->
-						<input type="text" placeholder="Search the entire shop here" name="searchinput" id="myInput" style="position: relative;" class="">
-
+						<input type="text" placeholder="Search the entire shop here" name="search" id="search" style="position: relative;" class="">
+						<span style="clear: both;" id="match-list"></span>
 						<button class="" type="button"><i class="fa fa-search" style="color: white"></i></button>
 					</div>
+					<div id="match-list"></div>
+
 					<div class="searchareaproperties col-md-3 col-sm-12 col-xs-12"> 
 						<div class="contactinsearch"><font size="+1"><b> Call / SMS/ What's App</b></font></div>
 						<div class="contactinsearch"><font size="+3"><b>+6597772176</b></font></div>
@@ -135,7 +129,8 @@
 			</div>
 		</div>
 		<div class="searchbarphone" id="searchforphone">
-			<input type="text"  placeholder="Search the entire shop here" name="searchinput" id="myInput" style="position: relative;" class="">
+			<input type="text"  placeholder="Search the entire shop here" name="searchinput" id="search" style="position: relative;" class="">
+			<span id="match-list"></span>
 			<button class="" type="button"><i class="fa fa-search" style="color: white"></i></button>
 		</div>
 		
@@ -978,4 +973,5 @@
 				}
 
 			</script>
+			<script src="myjs.js"></script>
 		</body>
