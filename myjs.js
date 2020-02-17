@@ -17,7 +17,7 @@ const matchList = document.getElementById("match-list");
 
 //search states.json and filter it
 const searchStates = async searchText =>{
-	const res = await fetch('../demo/data.json');
+	const res = await fetch('data.json');
 	const states = await res.json();
 
 	// get matches to current text input
