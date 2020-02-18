@@ -601,4 +601,20 @@
 	text-align: center;
 	padding-top: 20px;
 }
-
+.categoriespropertiesleft img{
+	margin-left: 20px;
+}
+.categoriespropertiesleft b{
+	margin-left: 20px;
+}
+#info{
+	float: left;
+	clear: both;
+	margin-left: 20px;
+}
+.categoriespropertiesright img{
+	margin-right: 20px;
+}
+.categoriespropertiesright b{
+	margin-right: 20px;
+}

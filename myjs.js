@@ -54,3 +54,23 @@ const outputHtml = matches =>{
 }
 
 search.addEventListener('input', () => searchStates(search.value));
+
+var turn =0;
+
+const contact = document.getElementById("contactdropdown");
+const display = document.getElementById("info");
+
+contact.onclick = function(){
+	if(turn %2 == 0){
+	display.innerHTML = "<b>Sale hotline</b>" + " +6592177659" 
+	+ "<br>" + "<b>Adress</b>" + "Upper Serangoon road, Upper " +"<br>" +
+	" Serangoon Shopping center #01-21, Singapore 534626 " + "<br>"
+	+"Monday to Sunday" + "11a.m to 8p.m" + "<br><b>Contact web page</b>" + "<br><b>Location Map </b>"
+	+"<b>about us</b>";
+	document.getElementById("info").style.display = "block";
+	}
+	else{
+		document.getElementById("info").style.display = "none";
+	}
+	turn = turn+1;
+};
