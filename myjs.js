@@ -30,6 +30,11 @@ contact.onclick = function(){
 		document.getElementById("displaydelivery").style.display = "none";
 		document.getElementById("displayguidepage").style.display = "none";
 		document.getElementById("displaypayment").style.display = "none";
+		turn1 = 0;
+		turn2 = 0;
+		turn3 = 0;
+		turn4 = 0;
+		turn5 = 0;
 	}
 	else{
 		document.getElementById("displaycontact").style.display = "none";
@@ -48,6 +53,11 @@ FAQs.onclick = function(){
 		document.getElementById("displaydelivery").style.display = "none";
 		document.getElementById("displayguidepage").style.display = "none";
 		document.getElementById("displaypayment").style.display = "none";
+		turn1 = 0;
+		turn2 = 0;
+		turn3 = 0;
+		turn4 = 0;
+		turn5 = 0;
 	}
 	else{
 		document.getElementById("displaycontact").style.display = "none";
@@ -66,6 +76,11 @@ delivery.onclick = function(){
 		document.getElementById("displaydelivery").style.display = "block";
 		document.getElementById("displayguidepage").style.display = "none";
 		document.getElementById("displaypayment").style.display = "none";
+		turn1 = 0;
+		turn2 = 0;
+		turn3 = 0;
+		turn4 = 0;
+		turn5 = 0;
 	}
 	else{
 		document.getElementById("displaycontact").style.display = "none";
@@ -84,6 +99,11 @@ guidepage.onclick = function(){
 		document.getElementById("displaydelivery").style.display = "none";
 		document.getElementById("displayguidepage").style.display = "block";
 		document.getElementById("displaypayment").style.display = "none";
+		turn1 = 0;
+		turn2 = 0;
+		turn3 = 0;
+		turn4 = 0;
+		turn5 = 0;
 	}
 	else{
 		document.getElementById("displaycontact").style.display = "none";
@@ -102,6 +122,11 @@ payment.onclick = function(){
 		document.getElementById("displaydelivery").style.display = "none";
 		document.getElementById("displayguidepage").style.display = "none";
 		document.getElementById("displaypayment").style.display = "block";
+		turn1 = 0;
+		turn2 = 0;
+		turn3 = 0;
+		turn4 = 0;
+		turn5 = 0;
 	}
 	else{
 		document.getElementById("displaycontact").style.display = "none";
