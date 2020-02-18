@@ -1,76 +1,115 @@
-$(document).ready(function() { 
 
-		$.getJSON('data.json', function(emp) {
-			console.log(emp);
-			var user_days = [];
-			for (var i = 0; i < emp.length; i++) {
-				console.log(i);
-  				console.log(emp[i]);
-  				
-  			}
-		}); 
 
-	}); 
+var turn1 =0;
+var turn2 =0;
+var turn3 =0;
+var turn4 =0;
+var turn5 =0;
 
-const search = document.getElementById("search");
-const matchList = document.getElementById("match-list");
+const contact = document.getElementById("contact");
+const displaycontact = document.getElementById("displaycontact");
+const displayFAQs = document.getElementById("displayFAQs");
+const FAQs = document.getElementById("FAQs");
+const delivery = document.getElementById("delivery");
+const displaydelivery = document.getElementById("displaydelivery");
+const guidepage = document.getElementById("guidepage");
+const displayguidepage = document.getElementById("displayguidepage");
+const payment = document.getElementById("paymentoption");
+const displaypayment = document.getElementById("displaypayment");
 
-//search states.json and filter it
-const searchStates = async searchText =>{
-	const res = await fetch('data.json');
-	const states = await res.json();
-
-	// get matches to current text input
-	let matches = states.filter(state => {
-		const regex = new RegExp(`^${searchText}`, 'gi');
-		return state.name.match(regex) || state.abbr.match(regex);
-	});
-
-	if(searchText.length === 0){
-		matches = [];
-		matchList.innerHTML = '';
-	}
-
-	outputHtml(matches);
-
-};
-
-//show result in HTML
-const outputHtml = matches =>{
-	if(matches.length>0){
-		const html = matches.map(match => `
-				<div class="card card-body mb-1">
-					<h4>${match.name}(${match.abbr})
-					<span class = "text-primary">${
-						match.capital
-					}</span></h4>
-					<small>Lat : ${match.lat}/long :${match.long}</small>
-				</div>
-			`)
-		.join('');
-
-		matchList.innerHTML = html;
-	}
-}
-
-search.addEventListener('input', () => searchStates(search.value));
-
-var turn =0;
-
-const contact = document.getElementById("contactdropdown");
-const display = document.getElementById("info");
 
 contact.onclick = function(){
-	if(turn %2 == 0){
-	display.innerHTML = "<b>Sale hotline</b>" + " +6592177659" 
+	if(turn1 %2 == 0){
+	displaycontact.innerHTML = "<b>Sale hotline</b>" + " +6592177659" 
 	+ "<br>" + "<b>Adress</b>" + "Upper Serangoon road, Upper " +"<br>" +
 	" Serangoon Shopping center #01-21, Singapore 534626 " + "<br>"
 	+"Monday to Sunday" + "11a.m to 8p.m" + "<br><b>Contact web page</b>" + "<br><b>Location Map </b>"
 	+"<b>about us</b>";
-	document.getElementById("info").style.display = "block";
+		document.getElementById("displaycontact").style.display = "block";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "none";
 	}
 	else{
-		document.getElementById("info").style.display = "none";
+		document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "none";
 	}
-	turn = turn+1;
+	turn1 = turn1+1;
 };
+FAQs.onclick = function(){
+	if(turn2 %2 == 0){
+		displayFAQs.innerHTML = "aaaaaaaaaaaaaa";
+	document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "block";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "none";
+	}
+	else{
+		document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "none";
+	}
+	turn2 = turn2+1;
+};
+delivery.onclick = function(){
+	if(turn3 %2 == 0){
+		displaydelivery.innerHTML = "aaaaaaaaaaaaaa";
+	document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "block";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "none";
+	}
+	else{
+		document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "none";
+	}
+	turn3 = turn3+1;
+};
+guidepage.onclick = function(){
+	if(turn4 %2 == 0){
+		displayguidepage.innerHTML = "aaaaaaaaaaaaaa";
+	document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "block";
+		document.getElementById("displaypayment").style.display = "none";
+	}
+	else{
+		document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "none";
+	}
+	turn4 = turn4+1;
+};
+payment.onclick = function(){
+	if(turn5 %2 == 0){
+		displaypayment.innerHTML = "aaaaaaaaaaaaaa";
+	document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "block";
+	}
+	else{
+		document.getElementById("displaycontact").style.display = "none";
+		document.getElementById("displayFAQs").style.display = "none";
+		document.getElementById("displaydelivery").style.display = "none";
+		document.getElementById("displayguidepage").style.display = "none";
+		document.getElementById("displaypayment").style.display = "none";
+	}
+	turn5 = turn5+1;
+}
+

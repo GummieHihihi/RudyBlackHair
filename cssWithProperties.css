@@ -607,7 +607,12 @@
 .categoriespropertiesleft b{
 	margin-left: 20px;
 }
-#info{
+#displaycontact{
+	float: left;
+	clear: both;
+	margin-left: 20px;
+}
+#displayFAQs{
 	float: left;
 	clear: both;
 	margin-left: 20px;
