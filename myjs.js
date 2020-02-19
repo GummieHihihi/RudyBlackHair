@@ -9,12 +9,14 @@ const resultprint = document.getElementById("resultprint");
 
 input.addEventListener('input', function() {
 	inputValue = document.getElementById("input").value;
+	if(inputValue == ""){
+		empty();
+	}
 	console.log("the character input is : " + inputValue);
 	$.getJSON( "data.json", function( data ) {
 
 		console.log(data);
 		for(var i =0; i < data.length-1; i ++){
-			console.log(data);
 			if(data[i].name.charAt(0).toUpperCase() == inputValue.charAt(0).toUpperCase()){
 				array[j] = data[i];
 				j = j+1;
@@ -26,10 +28,12 @@ input.addEventListener('input', function() {
 });
 
 function printresult( array){
-	for(var j =0; j < array.length;j++){
-		resultprint.innerHTML =  "name : " + array[j].name +  " , " + " abbr : " 
-		+ array[j].abbr;
+	resultprint.innerHTML = JSON.stringify(array);
 
+}
+function empty(){
+	while(array.length > 0) {
+		array.pop();
 	}
 }
 
