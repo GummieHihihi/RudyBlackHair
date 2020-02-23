@@ -1,6 +1,4 @@
 
-
-const text = document.getElementById("input").value;
 var like = 0;
 var j =0;
 var input = document.getElementById("input");
@@ -176,4 +174,3 @@ payment.onclick = function(){
 	}
 	turn5 = turn5+1;
 }
-
