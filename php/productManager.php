@@ -173,7 +173,7 @@
 					<div class="row">
 						<li class="col-md-1 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
 						<li class="col-md-2 col-sm-6 col-xs-6"> <a href="productManager.php"> <b><font size="+1">Show all Products</font></b></a></li>
-						<li class="col-md-2 col-sm-6 col-xs-6"><a href="onsaleManager.php"><b><font size="+1">Add a product</font></b></a></li>
+						<li class="col-md-2 col-sm-6 col-xs-6"><a href="addProduct.php"><b><font size="+1">Add a product</font></b></a></li>
 						<li class="col-md-2 col-sm-6 col-xs-6"><a href="shopByCategories.php"><b><font size="+1">Edit a product</font></b></a></li>
 						<li class="col-md-2 col-sm-6 col-xs-6"><a href="shopByCategories.php"><b><font size="+1">Delete a product</font></b></a></li>
 						<li class="col-md-2 col-sm-6 col-xs-6"><a href="shopByCategories.php"><b><font size="+1">search For a product</font></b></a></li>

@@ -30,7 +30,8 @@
                 productimg blob
                 ");
         echo "<br/>";
-        
+        header("Location : mainMenu.php");
+        createTable("demo", "demoName VARCHAR(50) , demoNumber int PRIMARY KEY ");
 	 ?>
 
 </body>

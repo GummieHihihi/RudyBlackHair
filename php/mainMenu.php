@@ -109,6 +109,7 @@
 </style>
 </head>
 <body>
+	
 	<div class="containall">
 		<div class="header" id="headerforcomputer">
 			<!-- the first big navigator-->
