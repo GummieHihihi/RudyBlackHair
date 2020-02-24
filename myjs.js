@@ -6,28 +6,37 @@ var array = [];
 const resultprint = document.getElementById("resultprint");
 
 input.addEventListener('input', function() {
-	inputValue = document.getElementById("input").value;
-	if(inputValue == ""){
-		empty();
-	}
-	console.log("the character input is : " + inputValue);
-	$.getJSON( "data.json", function( data ) {
-
-		console.log(data);
-		for(var i =0; i < data.length-1; i ++){
-			if(data[i].name.charAt(0).toUpperCase() == inputValue.charAt(0).toUpperCase()){
-				array[j] = data[i];
-				j = j+1;
-			}
+	document.getElementById("loading").style.display = " block";
+	setTimeout(function(){
+		document.getElementById("loading").style.display = "none";
+	}, 2000)
+	setTimeout(function(){
+		inputValue = document.getElementById("input").value;
+		if(inputValue == ""){
+			empty();
+			array = [];
 		}
-		console.log(array);
-		printresult(array);
-	});
+		console.log("the character input is : " + inputValue);
+		$.getJSON( "data.json", function( data ) {
+
+			console.log(data);
+			for(var i =0; i < data.length-1; i ++){
+				if(data[i].name.charAt(0).toUpperCase() == inputValue.charAt(0).toUpperCase()){
+					array[j] = data[i];
+					j = j+1;
+				}
+			}
+			console.log(array);
+			printresult(array);
+		});
+	}, 2000)
 });
 
 function printresult( array){
 	resultprint.innerHTML = JSON.stringify(array);
-
+	if (array == []) {
+		resultprint.innerHTML = "";
+	}
 }
 function empty(){
 	while(array.length > 0) {

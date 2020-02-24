@@ -71,8 +71,8 @@
 						<!-- input in input-->
 						<div class="row">
 							<input type="text" placeholder="Search the entire shop here" name="search" id="input" style="position: relative;" class="">
-							
 							<button class="" type="button"><i class="fa fa-search" style="color: white"></i></button>
+							<div id="loading" style="position: absolute; background-color: blue;width: 55px;left: 365px;top: 34px;height: 39px;"><img src="image/loadingimg.jpg" class="img-responsive"></div>
 						</div>
 						<div class="row">
 							<span style="clear: both;" id="resultprint"></span>
@@ -972,7 +972,7 @@
 					document.getElementById("footercomputer").style.display = "block";
 					document.getElementById("footerphone").style.display = "none";
 				}
-
+				document.getElementById("loading").style.display = "none";
 			</script>
 			<script src="myjs.js"></script>
 		</body>
