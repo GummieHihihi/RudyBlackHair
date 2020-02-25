@@ -57,4 +57,9 @@ queryMysql2($sql);
 echo "Table $name is created";
 }
 
+function insertInto($name, $body){
+    $sql = " INSERT INTO $name  $body";
+    echo "data is inserted";
+}
+
 ?>
