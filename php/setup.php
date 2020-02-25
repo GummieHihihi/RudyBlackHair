@@ -12,7 +12,7 @@
 
 		createTable("shopByCategories", "productbyCategoriesID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 productName VARCHAR(50),
-                productSaleImg blob
+                productSaleImg longblob
                 ");
         echo "<br/>";
 
@@ -20,18 +20,18 @@
                 productName VARCHAR(50),
                 productDescription VARCHAR(50),
                 price float,
-                productSaleImg blob
+                productSaleImg longblob
                 ");
         echo "<br/>";
 
 		createTable("Product", "productID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 productName VARCHAR(50),
                 productStatus VARCHAR(50),
-                productimg blob
+                productimg longblob
                 ");
         echo "<br/>";
         header("Location : mainMenu.php");
-        createTable("demo", "demoName VARCHAR(50) , demoNumber int PRIMARY KEY ");
+        createTable("demo", "productID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, demoName VARCHAR(50) , demoNumber int , img longblob");
 	 ?>
 
 </body>

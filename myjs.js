@@ -1,10 +1,11 @@
 
 var like = 0;
 var j =0;
+var k =0;
 var input = document.getElementById("input");
 var array = [];
 const resultprint = document.getElementById("resultprint");
-
+var result = [];
 input.addEventListener('input', function() {
 	document.getElementById("loading").style.display = " block";
 	setTimeout(function(){
@@ -15,6 +16,8 @@ input.addEventListener('input', function() {
 		if(inputValue == ""){
 			empty();
 			array = [];
+			result = [];
+			resultprint.innerHTML = "";
 		}
 		console.log("the character input is : " + inputValue);
 		$.getJSON( "data.json", function( data ) {
@@ -23,17 +26,23 @@ input.addEventListener('input', function() {
 			for(var i =0; i < data.length-1; i ++){
 				if(data[i].name.charAt(0).toUpperCase() == inputValue.charAt(0).toUpperCase()){
 					array[j] = data[i];
+					result[k] = array[j].name + array[j].abbr;
 					j = j+1;
+					k = k +1;
 				}
 			}
 			console.log(array);
-			printresult(array);
+			printresult(result);
 		});
 	}, 2000)
 });
 
-function printresult( array){
-	resultprint.innerHTML = JSON.stringify(array);
+function printresult( $array){
+	for(var i =0; i < result.length; i ++){
+		result.sort();
+		resultprint.innerHTML = result.join(" <br> ");
+	}
+	
 	if (array == []) {
 		resultprint.innerHTML = "";
 	}
@@ -41,6 +50,9 @@ function printresult( array){
 function empty(){
 	while(array.length > 0) {
 		array.pop();
+	}
+	while(result.length > 0) {
+		result.pop();
 	}
 }
 
