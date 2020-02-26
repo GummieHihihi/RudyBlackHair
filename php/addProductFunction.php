@@ -8,10 +8,10 @@ $con = new mysqli($dbhost, $dbuser, $dbpassword, "duongDb", $dbport);
 if(isset($_POST['save'])){
 	$name = $_POST['name'];
 	$status = $_POST['status'];
-	$img = $_FILES['image']['tmp_name'];
+	$img = $_FILES['image']['name'];
 	$imgContent = addslashes(file_get_contents($img));
 
-	$insert = $con -> query("INSERT INTO product(productName, productStatus , productimg) VALUES ('$name', '$status', '$imgContent')") or
+	$insert = $con -> query("INSERT INTO product(productName, productStatus , productimg) VALUES ('$name', '$status', '$img')") or
 	die($con -> error);
 	echo "<script>alert('image has been uploaded to database')</script>";
 

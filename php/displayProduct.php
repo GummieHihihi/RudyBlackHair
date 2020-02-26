@@ -8,11 +8,10 @@ $dbuser = "root";
 $dbpassword = "";
 
 $con = new mysqli($dbhost, $dbuser, $dbpassword, "duongDb", $dbport);
-$selectall = $con -> query("SELECT * FROM product WHERE productID = 2") or
+$selectall = $con -> query("SELECT * FROM product ") or
 die($con -> error);
-if ($selectall) {
-	echo "<script>alert('select all from product table')</script>";
-}
+
+$con -> close();
 
 
 ?>
@@ -23,28 +22,35 @@ if ($selectall) {
 	<title></title>
 </head>
 <body>
-	<table class="table" >
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>status</th>
-			<th>image</th>
-
+	<center>
+		<table class="table" style="margin: auto" >
+			<thead>
+				<tr>
+					<th class="col">ID</th>
+					<th class="col">Name</th>
+					<th class="col">status</th>
+					<th class="col">image</th>
+				</tr>
+			</thead>
 			<?php
 			while ($row = mysqli_fetch_array($selectall)) {
 				$productId = $row[0];
 				$productName = $row[1];
 				$productStatus = $row[2];
-				$productimg = $row[3]->fetch_assoc();
-
+				$Image=$row[3];
+				echo "<tbody>";
 				echo "<tr>";
 				echo "<td>$productId</td>";
 				echo "<td>$productName</td>";
 				echo "<td>$productStatus</td>";
-				echo "<td>$productimg</td>";
+				echo "<td><img class = 'img-respondsive ' src='picture/$Image'></td>";
+				echo "</tr>";
+				echo "</tbody>";
 			}
 			?>
-		</tr>
-	</table>
+
+		</table>
+	</center>
+	
 </body>
 </html>

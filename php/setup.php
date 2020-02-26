@@ -27,7 +27,7 @@
 		createTable("Product", "productID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 productName VARCHAR(50),
                 productStatus VARCHAR(50),
-                productimg longblob
+                productimg VARCHAR(50)
                 ");
         echo "<br/>";
         header("Location : mainMenu.php");
