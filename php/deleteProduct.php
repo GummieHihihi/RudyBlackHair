@@ -51,16 +51,10 @@ $con -> close();
 					<td><?php echo $row[1]; ?></td>
 					<td><?php echo $row[2]; ?></td>
 					<td><?php echo "<img class = 'img-respondsive ' src='picture/$row[3]'>" ?></td>
-					<form action="editProductDetail.php" method="POST">
-
-						<td><input type="hidden" name="productname" value="<?php echo $row[0]; ?>">
-						</td>
-						<td><button type="submit" class="btn btn-primary">edit this product</button></td>
-
+					<form action="deleteProductFunction.php" method="POST">
 						<td><input type="hidden" name="productid" value="<?php echo $row[0]; ?>">
 						</td>
-						<td><button type="submit" class="btn btn-primary" name="save">edit this product</button></td>
-
+						<td><button type="submit" class="btn btn-primary" name="delete">Delete this product</button></td>
 					</form>
 
 				</tr>
