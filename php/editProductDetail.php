@@ -1,4 +1,8 @@
 <?php 
+session_start();
+$editid = $_POST['productid'];
+$_SESSION['productid'] = $editid;
+
 require_once('productManager.php');
 ?>
 <?php
@@ -8,7 +12,7 @@ $dbuser = "root";
 $dbpassword = "";
 
 $con = new mysqli($dbhost, $dbuser, $dbpassword, "duongDb", $dbport);
-$selectall = $con -> query("SELECT * FROM product ") or
+$selectall = $con -> query("SELECT * FROM product where productID = $editid") or
 die($con -> error);
 
 $con -> close();
@@ -16,6 +20,7 @@ $con -> close();
 
 ?>
 
+<?php echo $editid; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,6 +55,18 @@ $con -> close();
 			?>
 
 		</table>
+		<center>
+			<form action="editFuntion.php" method="post" enctype="multipart/form-data">
+				<label for="fname">Product New Name :</label><br>
+				<input type="text" id="name" name="newname" value=""><br>
+				<label for="lname">Product New status:</label><br>
+				<input type="number" id="status" name="newstatus" value=""><br><br>
+				<label for="lname">Product New image:</label><br>
+				<input type="file" name="newimage" value=""><br><br>
+				<input type="hidden" name="editid" value="<?php echo $editid; ?>">
+				<button type="submit" value="Add this Product" class="btn btn-primary" name="save">Edit this product</button> 
+			</form>
+		</center>
 	</center>
 	
 </body>

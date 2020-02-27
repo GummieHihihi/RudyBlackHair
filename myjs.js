@@ -26,7 +26,7 @@ input.addEventListener('input', function() {
 			for(var i =0; i < data.length-1; i ++){
 				if(data[i].name.charAt(0).toUpperCase() == inputValue.charAt(0).toUpperCase()){
 					array[j] = data[i];
-					result[k] = array[j].name + array[j].abbr;
+					result[k] = "name :" + array[j].name + ", " + "abbr :"+ array[j].abbr;
 					j = j+1;
 					k = k +1;
 				}
