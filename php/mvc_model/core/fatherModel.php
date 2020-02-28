@@ -69,22 +69,33 @@ abstract class fatherModel{
 abstract protected function createDatabase($name);
 
 protected function connecttodb($dbname){
-	$conn = new mysqli($this->dbhost, $this->dbuser, $this->dbpassword, $dbname,$this->dbport);
+	$conn =  mysqli_connect($this->dbhost, $this->dbuser, $this->dbpassword, $dbname,$this->dbport);
 	// Check connection
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
-	echo "Connected 2 successfully";
+	else{
+		echo "Connected to database successfully";
+	}
 	return $conn;
 }
 
 protected function query_on_db($query, $dbname){
 	$connection = $this->connecttodb($dbname);
 	$result = $connection->query($query);
+	if(!$result)
+    {
+    	echo "<br>";
+    	die($connection->error);
+    }
+    else{
+    	echo "working with database succesfully <br> ";
+    }
+    $connection->close();
 	return $result;
 }
 
-abstract protected function createTabe($name, $body,$dbname);
+abstract protected function createTable($name, $body,$dbname);
 
 abstract protected function insertInto($name, $body,$dbname);
 
