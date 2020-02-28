@@ -2,7 +2,7 @@
 /**
  * 
  */
-include "../core/fatherModel.php";
+require_once ('../core/fatherModel.php');
 $dbhost = "localhost";
 $dbport = 3306;
 $dbuser = "root";
@@ -16,40 +16,82 @@ class Model extends fatherModel
 		$this->dbuser = $dbuser;
 		$this->dbpassword = $dbpassword;
 	}
-	function createTabe($name, $body,$dbname)
+	function createTable($name, $body,$dbname)
 	{
 		$this->query_on_db("CREATE TABLE $name ($body)", $dbname);
 		echo "created table $name";
-		
 	}
 
 	function insertInto($name, $body, $dbname)
 	{
-		$this->query_on_db("INSERT INTO $name Values ($body)", $dbname);
-		echo "inserted";
+		
+		$query = $this->query_on_db("INSERT INTO $name values ($body)", $dbname);
+		if($query){
+			echo "inserted into the table $name";
+		}
+		else{
+			echo "cannot insert into the table $name";
+		}
 	}
 
-	function update($name, $body, $dbname){
-		$this->query_on_db("UPDATE $name Set $body", $dbname);
+	function update($name, $body,$condition, $dbname){
+		$query = $this->query_on_db("UPDATE $name set $body Where $condition", $dbname);
+		if($query){
+			echo "table $name has been updated";
+		}
+		else{
+			echo "not working";
+		}
 	}
 
 	function delete($name, $body, $dbname){
-		$this-> query_on_db("DELETE FROM $name  Where $body", $dbname);
+		$query = $this-> query_on_db("DELETE FROM $name  Where $body", $dbname);
+		if($query){
+			echo "table $name has been updated";
+		}
+		else{
+			echo "not working";
+		}
 	}
 
 	function createDatabase($name)
 	{
-		$this->queryMysql_on_server("create database $name");
-		echo "create Database $name";
+		$query = $this->queryMysql_on_server("create database $name");
+		if($query){
+			echo "database $name has been created";
+		}
+		else{
+			echo "not working";
+		}
 	}
 	function deletedadtabase($name){
-		$this-> queryMysql_on_server("drop database $name");
+		$query = $this-> queryMysql_on_server("drop database $name");
+		if($query){
+			echo "database $name has been deleted";
+		}
+		else{
+			echo "not working";
+		}
+	}
+	function deleteTable($name, $dbname){
+		$query = $this->query_on_db("drop table $name", $dbname);
+		if($query){
+			echo "table $name has been deleted";
+		}
+		else{
+			echo "not working";
+		}
+	}
+	function deleterow($tablename, $body, $dbname){
+		$query = $this->query_on_db("DELETE FROM $tablename WHERE $body", $dbname);
+		if($query){
+			echo "this row has been deleted";
+		}
+		else{
+			echo "not working";
+		}
 	}
 }
 
-$model = new Model($dbhost, $dbport, $dbuser, $dbpassword);
-$name = "haha";
-
-$model->insertInto("demotable", "$name, $name, $name", "duongdemo");
 
 ?>

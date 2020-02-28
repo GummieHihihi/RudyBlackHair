@@ -8,7 +8,7 @@ require_once("mainMenu.php");
 </head>
 <body>
 	<center>
-		<form method="POST" enctype="multipart/form-data" action="addProductFunction.php">
+		<form method="POST" enctype="multipart/form-data" action="../mvc_model/Controller/addcontroller.php">
 			<label for="fname">Product Name :</label><br>
 			<input type="text" id="name" name="name" value=""><br>
 			<label for="lname">Product status:</label><br>
