@@ -14,7 +14,7 @@ abstract class fatherController{
 
 	abstract protected function add($model, $block, $id);
 
-	abstract protected function displayall($model, $table, $block);
+	abstract protected function displayall($model, $table);
 
 	abstract protected function edit($model, $block, $body, $table, $condition);
 

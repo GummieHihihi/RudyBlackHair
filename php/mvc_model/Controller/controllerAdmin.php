@@ -12,6 +12,8 @@ class controllerAdmin extends fatherController
 }
 	function start(){
 		require_once('../model/setupAdmin.php');
+		$block = $this->block;
+		$block->render_layout_main_menu();
 	}
 
 	function displayMainMenu(){
@@ -19,14 +21,20 @@ class controllerAdmin extends fatherController
 		$block->render_layout_main_menu();
 	}
 
-	function add($name, $body, $dbname){
+	function add($tablename, $body, $dbname){
+		
 		$model = $this->model;
 		$block = $this->block;
-		$model->insertInto($name, $body, $dbname);
-		$block->displayall($name, $dbaname);
+		$model->insertInto($tablename, $body, $dbname);
+		include('../view/mainMenu.php');
+		
 	}
-	function displayall($model, $table, $block){
-
+	function displayall( $table, $dbname){
+		$model = $this->model;
+		$block = $this->block;
+		$selectall = $model->selectAll($table, $dbname);
+		$row =  mysqli_fetch_array($selectall);
+		$block->displayall($row);
 	}
 
 	function edit($model, $block, $body, $table, $condition){
@@ -34,9 +42,8 @@ class controllerAdmin extends fatherController
 	}
 
 	function delete($model,$block,$id,$table){
-		
+		header("Location : addController.php");
 	}
-
 	}
 
  ?>
