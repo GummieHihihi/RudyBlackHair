@@ -43,7 +43,7 @@ $con -> close();
 				echo "<td>$productId</td>";
 				echo "<td>$productName</td>";
 				echo "<td>$productStatus</td>";
-				echo <td><img class = 'img-respondsive ' src=picture/$Image></td>;
+				echo "<td><img class = 'img-respondsive' src='../picture/$Image'></td>";
 				echo "</tr>";
 				echo "</tbody>";
 			}

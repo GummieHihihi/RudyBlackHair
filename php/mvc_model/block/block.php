@@ -51,7 +51,7 @@ class block extends fatherBlock
 				$productId = $row[0];
 				$productName = $row[1];
 				$productStatus = $row[2];
-				$Image=$row[3];
+				$Image = $row[3];
 				echo "<tbody>";
 				echo "<tr>";
 				echo "<td>$productId</td>";
