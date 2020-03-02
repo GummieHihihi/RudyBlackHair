@@ -10,7 +10,7 @@ $dbpassword = "";
 
 class Model extends fatherModel
 {
-  	function __construct($dbhost, $dbport, $dbuser, $dbpassword){
+	function __construct($dbhost, $dbport, $dbuser, $dbpassword){
 		$this->dbhost = $dbhost;
 		$this->dbport = $dbport;
 		$this->dbuser = $dbuser;
@@ -18,7 +18,7 @@ class Model extends fatherModel
 	}
 	function createTable($name, $body,$dbname)
 	{
-		$this->query_on_db("CREATE TABLE $name ($body)", $dbname);
+		$this->query_on_db("CREATE TABLE IF NOT EXISTS $name ($body)", $dbname);
 		echo "created table $name";
 	}
 
@@ -56,12 +56,11 @@ class Model extends fatherModel
 
 	function createDatabase($name)
 	{
-		$query = $this->queryMysql_on_server("create database $name");
-		if($query){
-			echo "database $name has been created";
-		}
-		else{
-			echo "not working";
+
+		try {
+			$query = $this->queryMysql_on_server("create database IF NOT EXISTS $name ");
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
 		}
 	}
 	function deletedadtabase($name){
@@ -90,6 +89,16 @@ class Model extends fatherModel
 		else{
 			echo "not working";
 		}
+	}
+	function selectAll($table, $dbname){
+		$query = $this->query_on_db("SELECT * From $table",$dbname);
+		if($query){
+			echo "select all from $table";
+		}
+		else{
+			echo "not working";
+		}
+		return $query;
 	}
 }
 

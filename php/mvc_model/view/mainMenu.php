@@ -1,18 +1,4 @@
-<?php 
-include "../Controller/controllerAdmin.php";
-include "../model/model.php";
-include "../block/block.php";
 
-$block = new block();
-$dbhost = "localhost";
-$dbport = 3306;
-$dbuser = "root";
-$dbpassword = "";
-$model = new Model($dbhost,$dbport,$dbuser,$dbpassword);
-
-$controller = new controllerAdmin($model, $block);
-$controller->start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -179,7 +165,7 @@ $controller->start();
 				<ul class="navigatorproperties">
 					<div class="row">
 						<li class="col-md-3 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
-						<li class="col-md-2 col-sm-6 col-xs-6"> <a href="productManager.php"> <b><font size="+1">PRODUCT</font></b></a></li>
+						<li class="col-md-2 col-sm-6 col-xs-6"> <a href="../view/productManager.php"> <b><font size="+1">PRODUCT</font></b></a></li>
 						<li class="col-md-2 col-sm-6 col-xs-6"><a href="onsaleManager.php"><b><font size="+1">On sale Product</font></b></a></li>
 						<li class="col-md-2 col-sm-6 col-xs-6"><a href="shopByCategories.php"><b><font size="+1">Shop By Categories</font></b></a></li>
 						<li class="col-md-3 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
@@ -190,3 +176,18 @@ $controller->start();
 	</div>
 </body>
 </html>
+<?php 
+include "../Controller/controllerAdmin.php";
+include "../model/model.php";
+include "../block/block.php";
+
+$block = new block();
+$dbhost = "localhost";
+$dbport = 3306;
+$dbuser = "root";
+$dbpassword = "";
+$model = new Model($dbhost,$dbport,$dbuser,$dbpassword);
+
+$controller = new controllerAdmin($model, $block);
+$controller->start();
+?>
