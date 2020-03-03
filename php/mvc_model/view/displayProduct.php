@@ -7,7 +7,7 @@ $dbport = 3306;
 $dbuser = "root";
 $dbpassword = "";
 
-$con = new mysqli($dbhost, $dbuser, $dbpassword, "duongDb", $dbport);
+$con = new mysqli($dbhost, $dbuser, $dbpassword, "admin", $dbport);
 $selectall = $con -> query("SELECT * FROM product ") or
 die($con -> error);
 

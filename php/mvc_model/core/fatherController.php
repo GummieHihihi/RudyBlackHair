@@ -14,11 +14,13 @@ abstract class fatherController{
 
 	abstract protected function add($model, $block, $id);
 
-	abstract protected function displayall($model, $table);
+	abstract protected function displayall($table,$dbname);
 
-	abstract protected function edit($model, $block, $body, $table, $condition);
+	abstract  protected function delete($id,$table, $dbname);
 
-	abstract  protected function delete($model,$block,$id,$table);
+	abstract protected function displayedit($row);
+
+
 
 }
 
