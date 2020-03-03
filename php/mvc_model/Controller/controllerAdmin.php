@@ -9,7 +9,7 @@ class controllerAdmin extends fatherController
 	{
 		$this->model = $model;
 		$this->block = $block;
-}
+	}
 	function start(){
 		require_once('../model/setupAdmin.php');
 		$block = $this->block;
@@ -26,24 +26,30 @@ class controllerAdmin extends fatherController
 		$model = $this->model;
 		$block = $this->block;
 		$model->insertInto($tablename, $body, $dbname);
-		include('../view/mainMenu.php');
 		
 	}
-	function displayall( $table, $dbname){
+	function displayall($table, $dbname){
 		$model = $this->model;
+		$selectall = $model->selectall($table, $dbname);
+		$row = $selectall -> fetch_all(MYSQLI_NUM);
 		$block = $this->block;
-		$selectall = $model->selectAll($table, $dbname);
-		$row =  mysqli_fetch_array($selectall);
 		$block->displayall($row);
 	}
 
-	function edit($model, $block, $body, $table, $condition){
-
+	function displayedit($id){
+		$block = $this->block;
+		$block->render_layout_edit($id);
+		
 	}
 
-	function delete($model,$block,$id,$table){
-		header("Location : addController.php");
+	function delete($table,$condition,$dbname){
+		$model = $this->model;
+		$model->delete($table,$condition,$dbname);
 	}
+	function saveAfterEdit($name, $body, $condition, $dbname){
+		$model = $this->model;
+		$model->update($name, $body, $condition, $dbname);
 	}
+}
 
- ?>
+?>

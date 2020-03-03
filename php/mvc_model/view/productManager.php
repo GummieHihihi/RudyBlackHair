@@ -134,7 +134,7 @@
 			<!-- logo image-->
 			<div class="searcharea">
 				<div class="row">
-					<div class="searchareaproperties col-md-3 col-sm-12 col-xs-6"> <img class="img-responsive" alt="icon" src="image/horny.png"></div>
+					<div class="searchareaproperties col-md-3 col-sm-12 col-xs-6"> <img class="img-responsive" alt="icon" src="../picture/horny.png"></div>
 
 					<div class="searchareainput col-md-6 col-sm-12 col-xs-6"> 
 						<!-- input in input-->
@@ -163,7 +163,7 @@
 				<ul class="navigatorproperties">
 					<div class="row">
 						<li class="col-md-3 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
-						<li class="col-md-2 col-sm-6 col-xs-6"> <a href="productManager.php"> <b><font size="+1">PRODUCT</font></b></a></li>
+						<li class="col-md-2 col-sm-6 col-xs-6"> <a href="../view/productManager.php"> <b><font size="+1">PRODUCT</font></b></a></li>
 						<li class="col-md-2 col-sm-6 col-xs-6"><a href="onsaleManager.php"><b><font size="+1">On sale Product</font></b></a></li>
 						<li class="col-md-2 col-sm-6 col-xs-6"><a href="shopByCategories.php"><b><font size="+1">Shop By Categories</font></b></a></li>
 						<li class="col-md-3 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
@@ -172,16 +172,18 @@
 				<ul class="navigatorproperties" style="margin-top: 30px;">
 					<div class="row">
 						<li class="col-md-1 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
-						<li class="col-md-2 col-sm-6 col-xs-6"> 
-							<form method="post" action="../Controller/displayallController.php">
+						<li class="col-md-3 col-sm-6 col-xs-6"> 
+							<form method="post" action="../Controller/controllerReal.php">
 								<button href="" type="submit" name="displayAll"> <b><font size="+1">Show all Products</font></b></button>
 							</form>
 						</li>
-						<li class="col-md-2 col-sm-6 col-xs-6"><a href="addProduct.php"><b><font size="+1">Add a product</font></b></a></li>
-						<li class="col-md-2 col-sm-6 col-xs-6"><a href="editProduct.php"><b><font size="+1">Edit a product</font></b></a></li>
-						<li class="col-md-2 col-sm-6 col-xs-6"><a href="deleteProduct.php"><b><font size="+1">Delete a product</font></b></a></li>
-						<li class="col-md-2 col-sm-6 col-xs-6"><a href="shopByCategories.php"><b><font size="+1">search For a product</font></b></a></li>
-						<li class="col-md-1 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
+						<li class="col-md-4 col-sm-6 col-xs-6">
+							<form method="post" action="../Controller/controllerReal.php">
+								<button href="" type="submit" name="addRequest"> <b><font size="+1">Add a product</font></b></button>
+							</form>
+						</li>
+						
+						<li class="col-md-4 col-sm-6 col-xs-6"><a href="shopByCategories.php"><b><font size="+1">search For a product</font></b></a></li>
 					</div>
 					
 				</ul>

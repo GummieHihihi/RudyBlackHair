@@ -12,9 +12,7 @@ abstract class fatherBlock
 
 	abstract protected function render_layout_add();
 
-	abstract protected function render_layout_edit();
-
-	abstract protected function render_layout_delete();
+	abstract protected function render_layout_edit($id);
 
 	abstract protected function render_layout_update();
 

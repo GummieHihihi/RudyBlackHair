@@ -60,7 +60,7 @@ abstract class fatherModel{
     	die($connection->error);
     }
     else{
-    	echo "working with database succesfully <br> ";
+    	
     }
     $connection->close();
     return $result;
@@ -75,7 +75,7 @@ protected function connecttodb($dbname){
 		die("Connection failed: " . $conn->connect_error);
 	}
 	else{
-		echo "Connected to database successfully";
+		
 	}
 	return $conn;
 }
@@ -89,7 +89,7 @@ protected function query_on_db($query, $dbname){
     	die($connection->error);
     }
     else{
-    	echo "working with database succesfully <br> ";
+    	
     }
     $connection->close();
 	return $result;

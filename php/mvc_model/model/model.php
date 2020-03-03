@@ -26,32 +26,17 @@ class Model extends fatherModel
 	{
 		
 		$query = $this->query_on_db("INSERT INTO $name values ($body)", $dbname);
-		if($query){
-			echo "inserted into the table $name";
-		}
-		else{
-			echo "cannot insert into the table $name";
-		}
+		
 	}
 
 	function update($name, $body,$condition, $dbname){
 		$query = $this->query_on_db("UPDATE $name set $body Where $condition", $dbname);
-		if($query){
-			echo "table $name has been updated";
-		}
-		else{
-			echo "not working";
-		}
+		
 	}
 
 	function delete($name, $body, $dbname){
 		$query = $this-> query_on_db("DELETE FROM $name  Where $body", $dbname);
-		if($query){
-			echo "table $name has been updated";
-		}
-		else{
-			echo "not working";
-		}
+		
 	}
 
 	function createDatabase($name)
@@ -65,39 +50,19 @@ class Model extends fatherModel
 	}
 	function deletedadtabase($name){
 		$query = $this-> queryMysql_on_server("drop database $name");
-		if($query){
-			echo "database $name has been deleted";
-		}
-		else{
-			echo "not working";
-		}
+		
 	}
 	function deleteTable($name, $dbname){
 		$query = $this->query_on_db("drop table $name", $dbname);
-		if($query){
-			echo "table $name has been deleted";
-		}
-		else{
-			echo "not working";
-		}
+		
 	}
 	function deleterow($tablename, $body, $dbname){
 		$query = $this->query_on_db("DELETE FROM $tablename WHERE $body", $dbname);
-		if($query){
-			echo "this row has been deleted";
-		}
-		else{
-			echo "not working";
-		}
+		
 	}
 	function selectAll($table, $dbname){
-		$query = $this->query_on_db("SELECT * From $table",$dbname);
-		if($query){
-			echo "select all from $table";
-		}
-		else{
-			echo "not working";
-		}
+		$query = $this->query_on_db("SELECT * from $table",$dbname);
+		
 		return $query;
 	}
 }
