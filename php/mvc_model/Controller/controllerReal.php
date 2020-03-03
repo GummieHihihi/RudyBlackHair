@@ -44,5 +44,12 @@ if(isset($_POST['deleteThis'])){
 	$controller->delete( "product", " productID = $deleteid", "admin");
 	$controller->displayAll("product", "admin");
 }
+if(isset($_POST['searchRequest'])){
+	$block->render_layout_search();
+}
+
+if(isset($_POST['searchProduct'])){
+	
+}
 
 ?>

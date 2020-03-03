@@ -171,19 +171,23 @@
 				</ul>
 				<ul class="navigatorproperties" style="margin-top: 30px;">
 					<div class="row">
-						<li class="col-md-1 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
+						<li class="col-md-2 col-sm-6 col-xs-12"> <a href="#"> <b><font size="+1"></font></b></a></li>
 						<li class="col-md-3 col-sm-6 col-xs-6"> 
 							<form method="post" action="../Controller/controllerReal.php">
 								<button href="" type="submit" name="displayAll"> <b><font size="+1">Show all Products</font></b></button>
 							</form>
 						</li>
-						<li class="col-md-4 col-sm-6 col-xs-6">
+						<li class="col-md-3 col-sm-6 col-xs-6">
 							<form method="post" action="../Controller/controllerReal.php">
 								<button href="" type="submit" name="addRequest"> <b><font size="+1">Add a product</font></b></button>
 							</form>
 						</li>
 						
-						<li class="col-md-4 col-sm-6 col-xs-6"><a href="shopByCategories.php"><b><font size="+1">search For a product</font></b></a></li>
+						<li class="col-md-4 col-sm-6 col-xs-6">
+							<form method="post" action="../Controller/controllerReal.php">
+								<button href="" type="submit" name="searchRequest"> <b><font size="+1">search For a Product</font></b></button>
+							</form>
+						</li>
 					</div>
 					
 				</ul>

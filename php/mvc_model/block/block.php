@@ -18,17 +18,7 @@ class block extends fatherBlock
 
 	function render_layout_add(){
 		require_once('../view/productManager.php');
-		echo"<center>";
-		echo"<form method='POST' enctype='multipart/form-data' action='../Controller/controllerReal.php'>";
-		echo"<label for='fname'>Product Name :</label><br>";
-		echo"<input type='text' id='name' name='productName' value=''><br>";
-		echo"<label for='lname'>Product status:</label><br>";
-		echo"<input type='number' id='status' name='productStatus' value=''><br><br>";
-		echo"<label for='lname'>Product image:</label><br>";
-		echo"<input type='file' name='image' value=''><br><br>";
-		echo"<button type='submit' value='Add this Product' class='btn btn-primary' name='addProduct'>ADD a product</button>";
-		echo"</form>";
-		echo"</center>";
+		require_once('../template/add.php');
 	}
 
 	function render_layout_edit($id){
@@ -54,7 +44,15 @@ class block extends fatherBlock
 	}
 
 	function render_layout_search(){
-		alert("search successfully");
+		require_once('../view/productManager.php');
+		echo"<center>";
+		echo"<form action='../Controller/controllerReal.php' method='post' enctype='multipart/form-data'>";
+		echo"<label for='fname'>Product New  :</label><br>";
+		echo"<input style='margin-bottom : 20px' type='text' id='name' name='newname' value=''><br>";
+		
+		echo"<button type='submit' value='Add this Product' class='btn btn-primary' name='searchProduct'>Edit this product</button>"; 
+		echo"</form>";
+		echo"</center>";
 	}
 	function displayAll($row){
 		include('../view/productManager.php');
