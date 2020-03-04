@@ -22,11 +22,9 @@ class controllerAdmin extends fatherController
 	}
 
 	function add($tablename, $body, $dbname){
-		
 		$model = $this->model;
 		$block = $this->block;
 		$model->insertInto($tablename, $body, $dbname);
-		
 	}
 	function displayall($table, $dbname){
 		$model = $this->model;
@@ -39,7 +37,6 @@ class controllerAdmin extends fatherController
 	function displayedit($id){
 		$block = $this->block;
 		$block->render_layout_edit($id);
-		
 	}
 
 	function delete($table,$condition,$dbname){

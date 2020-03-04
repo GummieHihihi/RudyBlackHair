@@ -49,7 +49,6 @@ class block extends fatherBlock
 		echo"<form action='../Controller/controllerReal.php' method='post' enctype='multipart/form-data'>";
 		echo"<label for='fname'>Product New  :</label><br>";
 		echo"<input style='margin-bottom : 20px' type='text' id='name' name='newname' value=''><br>";
-		
 		echo"<button type='submit' value='Add this Product' class='btn btn-primary' name='searchProduct'>Edit this product</button>"; 
 		echo"</form>";
 		echo"</center>";
