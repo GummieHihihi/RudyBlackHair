@@ -4,13 +4,14 @@
  * 
  */
 require_once ('../core/fatherBlock.php');
+require_once('../model/model.php');
 
 class block extends fatherBlock
 {
-	
-	function __construct() 
+	public $model;
+	function __construct($model) 
 	{
-		# code...
+		$this->model = $model;
 	}
 	function render_layout_main_menu(){
 		require_once("../view/mainMenu.php");
@@ -37,10 +38,10 @@ class block extends fatherBlock
 		echo"</center>";
 	}
 
-	
+
 
 	function render_layout_update(){
-		
+
 	}
 
 	function render_layout_search(){
@@ -53,7 +54,11 @@ class block extends fatherBlock
 		echo"</form>";
 		echo"</center>";
 	}
-	function displayAll($row){
+	function displayAll($table, $dbname){
+		$model = $this->model;
+		$selectall = $model->selectAll($table, $dbname);
+		$row = $selectall -> fetch_all(MYSQLI_NUM);
+
 		include('../view/productManager.php');
 		echo"<center>";
 		echo"<table class='table' style='margin: auto' >";
@@ -76,7 +81,7 @@ class block extends fatherBlock
 			echo "<td>$productId</td>";
 			echo "<td>$productName</td>";
 			echo "<td>$productStatus</td>";
-			echo "<td><img class = 'img-respondsive ' src='../picture/$Image'></td>";
+			echo "<td><img class = 'img-respondsive' src='../picture/$Image'></td>";
 			echo "<form method = 'post' action= '../controller/controllerReal.php'>";
 			echo"<td><input type='hidden'  name='productid' value='$productId'></td>";
 			echo "<td><button class='btn btn-primary' name = 'editThis' > Edit </button></td>";
