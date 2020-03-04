@@ -27,11 +27,8 @@ class controllerAdmin extends fatherController
 		$model->insertInto($tablename, $body, $dbname);
 	}
 	function displayall($table, $dbname){
-		$model = $this->model;
-		$selectall = $model->selectall($table, $dbname);
-		$row = $selectall -> fetch_all(MYSQLI_NUM);
 		$block = $this->block;
-		$block->displayall($row);
+		$block->displayall($table,$dbname);
 	}
 
 	function displayedit($id){

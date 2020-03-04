@@ -3,10 +3,8 @@
 
 abstract class fatherBlock
 {
-
 	function __construct()
 	{
-
 	}
 	abstract protected function render_layout_main_menu();
 

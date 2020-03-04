@@ -3,18 +3,15 @@
  * 
  */
 require_once ('../core/fatherModel.php');
-$dbhost = "localhost";
-$dbport = 3306;
-$dbuser = "root";
-$dbpassword = "";
+
 
 class Model extends fatherModel
 {
-	function __construct($dbhost, $dbport, $dbuser, $dbpassword){
-		$this->dbhost = $dbhost;
-		$this->dbport = $dbport;
-		$this->dbuser = $dbuser;
-		$this->dbpassword = $dbpassword;
+	function __construct(){
+		$this->dbhost = "localhost";
+		$this->dbport = 3306;
+		$this->dbuser = "root";
+		$this->dbpassword = "";
 	}
 	function createTable($name, $body,$dbname)
 	{
@@ -24,19 +21,15 @@ class Model extends fatherModel
 
 	function insertInto($name, $body, $dbname)
 	{
-		
 		$query = $this->query_on_db("INSERT INTO $name values ($body)", $dbname);
-		
 	}
 
 	function update($name, $body,$condition, $dbname){
 		$query = $this->query_on_db("UPDATE $name set $body Where $condition", $dbname);
-		
 	}
 
 	function delete($name, $body, $dbname){
 		$query = $this-> query_on_db("DELETE FROM $name  Where $body", $dbname);
-		
 	}
 
 	function createDatabase($name)
