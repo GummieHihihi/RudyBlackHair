@@ -34,8 +34,6 @@
 		color: white;
 		margin-bottom: 9,5px;
 		padding-left: 55px;
-
-
 	}
 	.nignavigatorrightproperties{
 		text-align : center;

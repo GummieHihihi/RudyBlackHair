@@ -3,12 +3,15 @@
  * 
  */
 require_once('../core/fatherController.php');
+include "../Other/algorithm.php";
 class controllerAdmin extends fatherController
 {
+	public $algorithm;
 	function __construct($model, $block)
 	{
 		$this->model = $model;
 		$this->block = $block;
+		$this->algorithm = new Algorithm();
 	}
 	function start(){
 		require_once('../model/setupAdmin.php');
@@ -43,6 +46,19 @@ class controllerAdmin extends fatherController
 	function saveAfterEdit($name, $body, $condition, $dbname){
 		$model = $this->model;
 		$model->update($name, $body, $condition, $dbname);
+	}
+	function search($string1, $column,$table,$dbname){
+		$select = $this->model->selectColumn($column, $table,$dbname);
+		$row = $select -> fetch_all(MYSQLI_NUM);
+		foreach($row as $smallerRow){
+			$result = $this->algorithm->compare($smallerRow[0], $string1);
+			if($result == 0){
+				return $string1;
+			}
+			else{
+				return " no result";
+			}
+		}
 	}
 }
 

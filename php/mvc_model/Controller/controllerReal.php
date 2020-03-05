@@ -24,6 +24,7 @@ if(isset($_POST['displayAll'])){
 if(isset($_POST['editThis'])){
 	$productId = $_POST['productid'];
 	$controller->displayedit($productId);
+	
 }
 
 if(isset($_POST['saveEdit'])){
@@ -45,7 +46,9 @@ if(isset($_POST['searchRequest'])){
 }
 
 if(isset($_POST['searchProduct'])){
-
+	$searchname = $_POST['namesearch'];
+	$result = $controller->search($searchname, "productName", "product", "admin");
+	echo "result found :" . $result;
 }
 
 ?>
