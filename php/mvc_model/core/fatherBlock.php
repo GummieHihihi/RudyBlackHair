@@ -12,8 +12,6 @@ abstract class fatherBlock
 
 	abstract protected function render_layout_edit($id);
 
-	abstract protected function render_layout_update();
-
 	abstract protected function render_layout_search();
 }
  ?>

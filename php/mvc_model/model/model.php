@@ -15,26 +15,40 @@ class Model extends fatherModel
 	}
 	function createTable($name, $body,$dbname)
 	{
-		$this->query_on_db("CREATE TABLE IF NOT EXISTS $name ($body)", $dbname);
-		echo "created table $name";
+		try {
+			$query = $this->query_on_db("CREATE TABLE IF NOT EXISTS $name ($body)", $dbname);
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
 	}
 
 	function insertInto($name, $body, $dbname)
 	{
-		$query = $this->query_on_db("INSERT INTO $name values ($body)", $dbname);
+		try {
+			$query = $this->query_on_db("INSERT INTO $name values ($body)", $dbname);
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
 	}
 
 	function update($name, $body,$condition, $dbname){
-		$query = $this->query_on_db("UPDATE $name set $body Where $condition", $dbname);
+		try {
+			$query = $this->query_on_db("UPDATE $name set $body Where $condition", $dbname);
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
 	}
 
 	function delete($name, $body, $dbname){
-		$query = $this-> query_on_db("DELETE FROM $name  Where $body", $dbname);
+		try {
+			$query = $this-> query_on_db("DELETE FROM $name  Where $body", $dbname);
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
 	}
 
 	function createDatabase($name)
 	{
-
 		try {
 			$query = $this->queryMysql_on_server("create database IF NOT EXISTS $name ");
 		} catch (Exception $e) {
@@ -42,20 +56,44 @@ class Model extends fatherModel
 		}
 	}
 	function deletedadtabase($name){
-		$query = $this-> queryMysql_on_server("drop database $name");
-		
+		try {
+			$query = $this-> queryMysql_on_server("drop database $name");
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
+
 	}
 	function deleteTable($name, $dbname){
-		$query = $this->query_on_db("drop table $name", $dbname);
-		
+		try {
+			$query = $this->query_on_db("drop table $name", $dbname);
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
+
 	}
 	function deleterow($tablename, $body, $dbname){
-		$query = $this->query_on_db("DELETE FROM $tablename WHERE $body", $dbname);
-		
+		try {
+			$query = $this->query_on_db("DELETE FROM $tablename WHERE $body", $dbname);
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
+
 	}
 	function selectAll($table, $dbname){
-		$query = $this->query_on_db("SELECT * from $table",$dbname);
-		
+		try {
+			$query = $this->query_on_db("SELECT * from $table",$dbname);
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
+		return $query;
+
+	}
+	function selectColumn($column, $table, $dbname){
+		try {
+			$query = $this->query_on_db("SELECT $column from $table",$dbname);
+		} catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
 		return $query;
 	}
 }
