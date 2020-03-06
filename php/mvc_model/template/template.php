@@ -22,6 +22,9 @@ class Template
 	public function add_layout(){
 		include('../template/add.php');
 	}
+	public function display_Frontend($row){
+		header('Location: ../front_end/demo_withProperties.php');
+	}
 }
 
 ?>

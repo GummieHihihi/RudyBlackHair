@@ -2,7 +2,7 @@
 		<form method="POST" enctype="multipart/form-data" action="../Controller/controllerReal.php">
 			<label for="fname">Product Name :</label><br>
 			<input type="text"' id="name" name="productName" value=''><br>
-			<label for='lname'>Product status:</label><br>
+			<label for='lname'>Product price:</label><br>
 			<input type="number" id="status" name="productStatus" value=''><br><br>
 			<label for="lname">Product image:</label><br>
 			<input type="file" name="image" value=''><br><br>
