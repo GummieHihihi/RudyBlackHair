@@ -11,7 +11,7 @@ class block extends fatherBlock
 {
 	public $template;
 	public $model;
-	function __construct($model) 
+	function __construct($model)
 	{
 		$this->model = $model;
 		$this->template = new Template();
@@ -41,6 +41,23 @@ class block extends fatherBlock
 		include('../view/productManager.php');
 		$template = $this->template;
 		$template->display($row);
+	}
+
+	function add($tablename, $body, $dbname){
+		$this->model->insertInto($tablename, $body, $dbname);
+	}
+
+	function delete($table,$condition,$dbname){
+		$this->model->delete($table,$condition,$dbname);
+	}
+
+	function saveAfterEdit($name, $body, $condition, $dbname){
+		$this->model-> update($name, $body, $condition, $dbname);
+	}
+	function display_Frontend($table, $dbname){
+		$selectall = $this->model->selectAll($table, $dbname);
+		$row = $selectall -> fetch_all(MYSQLI_NUM);
+		$this->template->display_Frontend($row);
 	}
 }
 

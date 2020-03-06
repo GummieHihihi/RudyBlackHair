@@ -182,6 +182,6 @@ include "../block/block.php";
 $model = new Model();
 $block = new block($model);
 
-$controller = new controllerAdmin($model, $block);
+$controller = new controllerAdmin($block);
 $controller->start();
 ?>

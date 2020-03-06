@@ -1,11 +1,11 @@
 <?php 
-include "../Controller/controllerAdmin.php";
-include "../model/model.php";
-include "../block/block.php";
+require_once ('../Controller/controllerAdmin.php');
+require_once ('../model/model.php');
+require_once ('../block/block.php');
 
 $model = new Model();
 $block = new Block($model);
-$controller = new controllerAdmin($model, $block);
+$controller = new controllerAdmin($block);
 
 if(isset($_POST['addRequest'])){
 	$block->render_layout_add();
@@ -24,7 +24,6 @@ if(isset($_POST['displayAll'])){
 if(isset($_POST['editThis'])){
 	$productId = $_POST['productid'];
 	$controller->displayedit($productId);
-	
 }
 
 if(isset($_POST['saveEdit'])){
@@ -50,5 +49,10 @@ if(isset($_POST['searchProduct'])){
 	$result = $controller->search($searchname, "productName", "product", "admin");
 	echo "result found :" . $result;
 }
+
+if(isset($_POST['displayfrontend'])){
+	$controller->display_frontend("product", "admin");
+}
+
 
 ?>

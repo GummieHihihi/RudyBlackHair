@@ -8,7 +8,7 @@ $row = $_SESSION['row'];
 			<tr>
 				<th class="col">ID</th>
 				<th class="col">Name</th>
-				<th class="col">status</th>
+				<th class="col">Price</th>
 				<th class="col">image</th>
 			</tr>
 		</thead>

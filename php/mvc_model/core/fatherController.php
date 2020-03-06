@@ -20,8 +20,6 @@ abstract class fatherController{
 
 	abstract protected function displayedit($row);
 
-
-
 }
 
  ?>
