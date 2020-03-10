@@ -59,6 +59,7 @@ class block extends fatherBlock
 		$row = $selectall -> fetch_all(MYSQLI_NUM);
 		$this->template->display_Frontend($row);
 	}
+	
 }
 
 ?>

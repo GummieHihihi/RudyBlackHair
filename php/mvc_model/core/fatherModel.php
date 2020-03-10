@@ -40,12 +40,11 @@ abstract class fatherModel{
 	}
 
 	public function connecttoserver(){
-		$connection =  mysqli_connect($this->dbhost, $this->dbuser, $this->dbpassword);
-		if ($connection -> connect_error) {
-			die("Connection failed: " . mysqli_connect_error());
+		try {
+			$connection =  mysqli_connect($this->dbhost, $this->dbuser, $this->dbpassword);
 		}
-		else{
-			
+		catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
 		}
 		return $connection;
 		//this
@@ -84,14 +83,14 @@ protected function query_on_db($query, $dbname){
 	$connection = $this->connecttodb($dbname);
 	$result = $connection->query($query);
 	if(!$result)
-    {
-    	echo "<br>";
-    	die($connection->error);
-    }
-    else{
-    	
-    }
-    $connection->close();
+	{
+		echo "<br>";
+		die($connection->error);
+	}
+	else{
+
+	}
+	$connection->close();
 	return $result;
 }
 
