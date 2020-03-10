@@ -7,12 +7,13 @@ require_once ('../core/fatherModel.php');
 
 class Model extends fatherModel
 {
-	function __construct(){
-		$this->dbhost = "localhost";
-		$this->dbport = 3306;
-		$this->dbuser = "root";
-		$this->dbpassword = "";
+	function __construct($dbhost, $dbport, $dbuser, $dbpassword){
+		$this->dbhost = $dbhost;
+		$this->dbport = $dbport;
+		$this->dbuser = $dbuser;
+		$this->dbpassword = $dbpassword;
 	}
+	
 	function createTable($name, $body,$dbname)
 	{
 		try {

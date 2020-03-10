@@ -15,9 +15,6 @@ class controllerAdmin extends fatherController
 	}
 	//h
 	function start(){
-		require_once('../model/setupAdmin.php');
-		$block = $this->block;
-		$block->render_layout_main_menu();
 	}
 
 	function displayMainMenu(){

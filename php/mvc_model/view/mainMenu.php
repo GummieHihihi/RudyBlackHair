@@ -179,9 +179,12 @@ include "../Controller/controllerAdmin.php";
 include "../model/model.php";
 include "../block/block.php";
 
-$model = new Model();
-$block = new block($model);
-
-$controller = new controllerAdmin($block);
-$controller->start();
+require_once('../model/config.php');
+$model = new Model($dbhost, $dbport, $dbuser, $dbpassword);
+$model->createDatabase($dbname);
+$model->createTable("product", "productID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                productName VARCHAR(50),
+                productStatus VARCHAR(50),
+                productimg VARCHAR(50)
+                ",$dbname);
 ?>
