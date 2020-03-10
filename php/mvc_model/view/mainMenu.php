@@ -93,7 +93,7 @@
 	}
 	.navigatorproperties li a {
 		display: block;
-		color: black;
+		color: blue;
 		text-align: center;
 		text-decoration: none;
 		align-items: center;
