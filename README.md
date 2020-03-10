@@ -1,6 +1,8 @@
 # RudyBlackHair
 
-1. anh chỉ cần chạy file mvc_model là được ạ
+1. anh đổi cho em các thông tin về database như sau ạ : 
+đầu tiên anh vào file setupAdmin để set các thông tin db giống thông tin db của anh ạ. 
+Sau đó anh chạy file mvc_model ạ 
 2. sau đó anh vào mục product ạ 
 3. sau đó a vào add a product để thêm sản phẩm vào ạ
 4. sau đấu a test giúp e các chức năng còn lại với ạ.
