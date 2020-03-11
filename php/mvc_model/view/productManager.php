@@ -173,17 +173,17 @@
 					<div class="row">
 						
 						<li class="col-md-3 col-sm-6 col-xs-6"> 
-							<form method="post" action="../Controller/controllerReal.php">
+							<form method="post" action="../Controller/controllerReal.php?action=display">
 								<button href="" type="submit" name="displayAll"> <b><font size="+1">Show all Products</font></b></button>
 							</form>
 						</li>
 						<li class="col-md-3 col-sm-6 col-xs-6"> 
-							<form method="post" action="../Controller/controllerReal.php">
+							<form method="post" action="../Controller/controllerReal.php?action=display_frontend">
 								<button href="" type="submit" name="displayfrontend"> <b><font size="+1">Display front end</font></b></button>
 							</form>
 						</li>
 						<li class="col-md-3 col-sm-6 col-xs-6">
-							<form method="post" action="../Controller/controllerReal.php">
+							<form method="post" action="../Controller/controllerReal.php?action=addrequest">
 								<button href="" type="submit" name="addRequest"> <b><font size="+1">Add a product</font></b></button>
 							</form>
 						</li>

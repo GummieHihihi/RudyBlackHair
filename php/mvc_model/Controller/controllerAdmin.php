@@ -3,7 +3,6 @@
  * 
  */
 require_once('../core/fatherController.php');
-include "../helper/algorithm.php";
 class controllerAdmin extends fatherController
 {
 	public $algorithm;
@@ -11,7 +10,6 @@ class controllerAdmin extends fatherController
 	{
 
 		$this->block = $block;
-		$this->algorithm = new Algorithm();
 	}
 	//h
 	function start(){
