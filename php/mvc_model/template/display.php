@@ -25,7 +25,7 @@ $row = $_SESSION['row'];
 					<td><?php echo $productName; ?></td>
 					<td><?php echo $productStatus; ?></td>
 					<td><img class = "img-respondsive" src="../picture/<?php echo $Image; ?>"></td>
-					<form method = "post" action= "../Controller/controllerReal.php">
+					<form method = "post" action= "../Controller/controllerReal.php?modudle=product&action=editordelete">
 						<td><input type="hidden"  name="productid" value="<?php echo $productId ?>"></td>
 						<td><button class="btn btn-primary" name = "editThis" > Edit </button></td>
 						<td><button class="btn btn-primary" name = "deleteThis" >Delete</button></td>

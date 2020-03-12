@@ -2,7 +2,7 @@
 $id = $_SESSION['editID'];
 ?>
 <center>
-	<form action="../Controller/controllerReal.php" method="post" enctype="multipart/form-data">
+	<form action="../Controller/Home_Controller.php?module=product&action=editthis" method="post" enctype="multipart/form-data">
 		<label for="fname">Product New Name :</label><br>
 		<input type="text" id="name" name="newname" value=""><br>
 		<label for="lname">Product New Price:</label><br>

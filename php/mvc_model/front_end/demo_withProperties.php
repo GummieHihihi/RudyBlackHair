@@ -1,6 +1,12 @@
 <?php 
 require_once('../model/model.php');
 require_once('../model/config.php');
+$config = new config();
+$dbhost = $config->dbhost;
+$dbport = $config->dbport;
+$dbuser = $config->dbuser;
+$dbpassword = $config->dbpassword;
+$dbname = $config->dbname;
 $model = new Model($dbhost, $dbport, $dbuser, $dbpassword);
 $selsectAll = $model->selectAll("product", "admin");
 $row = $selsectAll -> fetch_all(MYSQLI_NUM);
