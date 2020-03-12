@@ -9,5 +9,7 @@ Sau đó anh chạy file mvc_model ạ
 Trong bản sửa mới này em đã liên kết giữa các trang với nhau bằng url và phương thức GET ạ, em vẫn đang hoàn thiện các class theo kiểu class ạ, a đọc và cho em xin góp ý với ạ, tks a ạ ^^
  
 
-
+Trong bản này em đã đổi phương thức kết nối với controller từ post sang get từ link ạ qua 2 biến module và action ạ.
+em cũng viết lại tất cả các file theo dạng đối tượng ạ trừ các files trong template ạ.
+Anh xem và góp ý cho em với ạ, em cảm ơn a ạ ^^
 
