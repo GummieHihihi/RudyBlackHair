@@ -13,7 +13,6 @@ class Template
 		include('../template/display.php');
 	}
 	public function editform_layout($id){
-		$_SESSION['editID'] = $id;
 		include('../template/edit.php');
 	}
 	public function search_layout(){

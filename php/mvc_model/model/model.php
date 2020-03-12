@@ -97,6 +97,15 @@ class Model extends fatherModel
 		}
 		return $query;
 	}
+	function selectallfrom( $table, $condition, $dbname){
+		try{
+			$query = $this->query_on_db("SELECT * from $table where $condition", $dbname );
+		}
+		catch (Exception $e) {
+			echo 'Not Working since database already existed ',  $e->getMessage(), "\n";
+		}
+		return $query;
+	}
 }
 
 
