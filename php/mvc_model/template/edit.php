@@ -1,5 +1,5 @@
 <?php 
-require_once('../model/config.php');
+require_once('../model/model.php');
 $config = new config();
 $dbhost = $config->dbhost;
 $dbport = $config->dbport;
@@ -18,7 +18,7 @@ $productinfo = $productinfoquery->fetch_all();
 		$productprice = $value[2];
 		$Image = $value[3];
 		?>
-		<form action="../Controller/Home_Controller.php?module=product&action=editthis" method="post" enctype="multipart/form-data">
+		<form action="../Controller/Home_Controller.php?module=product&action=editthis&id=<?php echo $productId;?>" method="post" enctype="multipart/form-data">
 			<label>Product Old name : <?php echo $productName; ?></label>
 			<br>
 			<label for="fname">Product New Name :</label><br>

@@ -4,7 +4,7 @@ include "../Controller/controllerAdmin.php";
 include "../model/model.php";
 include "../block/block.php";
 
-require_once('../model/config.php');
+require_once('../model/model.php');
 $config = new config();
 $dbhost = $config->dbhost;
 $dbport = $config->dbport;

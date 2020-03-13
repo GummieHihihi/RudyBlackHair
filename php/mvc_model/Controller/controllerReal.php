@@ -2,7 +2,6 @@
 require_once ('../Controller/controllerAdmin.php');
 require_once ('../model/model.php');
 require_once ('../block/block.php');
-require_once('../model/config.php');
 
 /**
  * 
@@ -39,13 +38,15 @@ class controllerReal
 				$this->controller->displayall("product", $this->dbname);
 			}
 		}
-		else if($action =='editordelete'){
+		else if($action =='editrequest'){
 			if(isset($_POST['editThis'])){
-				$productId = $_POST['productid'];
+				$productId = $_GET['id'];
 				$this->controller->displayedit($productId);
 			}
-			else if(isset($_POST['deleteThis'])){
-				$deleteid = $_POST['productid'];
+		}
+		else if ($action =='delete'){
+			if(isset($_POST['deleteThis'])){
+				$deleteid = $_GET['id'];
 				$this->controller->delete( "product", " productID = $deleteid", $this->dbname);
 				$this->controller->displayAll("product", $this->dbname);
 			}
