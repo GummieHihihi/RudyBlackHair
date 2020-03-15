@@ -18,7 +18,7 @@ $productinfo = $productinfoquery->fetch_all();
 		$productprice = $value[2];
 		$Image = $value[3];
 		?>
-		<form action="../Controller/Home_Controller.php?module=product&action=editthis&id=<?php echo $productId;?>" method="post" enctype="multipart/form-data">
+		<form action="../editDone/<?php echo $productId;?>.html" method="post" enctype="multipart/form-data">
 			<label>Product Old name : <?php echo $productName; ?></label>
 			<br>
 			<label for="fname">Product New Name :</label><br>
