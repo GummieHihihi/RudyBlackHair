@@ -1,4 +1,4 @@
 <?php 
 
-header('Location: ../thunghiem.html');
+header('Location: ../mvc_model/view/mainMenu.html');
  ?>
