@@ -18,7 +18,7 @@ $productinfo = $productinfoquery->fetch_all();
 		$productprice = $value[2];
 		$Image = $value[3];
 		?>
-		<form action="../editDone/<?php echo $productId;?>.html" method="post" enctype="multipart/form-data">
+		<form action="../Controller/Home_Controller.php?module=product&action=editthis&id=<?php echo $productId;?>" method="post" enctype="multipart/form-data">
 			<label>Product Old name : <?php echo $productName; ?></label>
 			<br>
 			<label for="fname">Product New Name :</label><br>
@@ -29,7 +29,7 @@ $productinfo = $productinfoquery->fetch_all();
 			<label for="lname">Product New Price:</label><br>
 			<input type='number' id="status" name='newstatus' value=''><br><br>
 			
-			<label>Product Old img : <img class = "img-respondsive" src="../picture/<?php echo $Image; ?>"></label>
+			<label>Product Old img : <img class = "img-respondsive" style="width:300px;height:300px;" src="../picture/<?php echo $Image; ?>"></label>
 			<br>
 			<br>
 			<label for="lname">Product New image:</label><br>
@@ -39,3 +39,6 @@ $productinfo = $productinfoquery->fetch_all();
 		</form>
 	<?php  }?>
 </center>
+<script type="text/javascript">
+	
+</script>

@@ -1,3 +1,8 @@
+<?php 
+require_once('../model/model.php');
+$config = new config();
+$config->start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -173,17 +178,17 @@
 					<div class="row">
 						
 						<li class="col-md-3 col-sm-6 col-xs-6"> 
-							<form method="post" action="../Home_Controller/display.html">
+							<form method="post" action="../Controller/Home_Controller.php?module=product&action=display">
 								<button href="" type="submit" name="displayAll"> <b><font size="+1">Show all Products</font></b></button>
 							</form>
 						</li>
 						<li class="col-md-3 col-sm-6 col-xs-6"> 
-							<form method="post" action="../Home_Controller/displayFront.html">
+							<form method="post" action="../Controller/Home_Controller.php?module=product&action=display_frontend">
 								<button href="" type="submit" name="displayfrontend"> <b><font size="+1">Display front end</font></b></button>
 							</form>
 						</li>
 						<li class="col-md-3 col-sm-6 col-xs-6">
-							<form method="post" action="../Home_Controller/addrequest.html">
+							<form method="post" action="../Controller/Home_Controller.php?module=product&action=addrequest">
 								<button href="" type="submit" name="addRequest"> <b><font size="+1">Add a product</font></b></button>
 							</form>
 						</li>
