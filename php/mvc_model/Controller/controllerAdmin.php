@@ -28,6 +28,9 @@ class controllerAdmin extends fatherController
 		$block = $this->block;
 		$block->add($tablename, $body, $dbname);
 	}
+	function saveAfterEdit($name, $body, $condition, $dbname){
+		$this->block->saveAfterEdit($name, $body, $condition, $dbname);
+	}
 	function displayall($table, $dbname){
 		$block = $this->block;
 		$block->displayall($table,$dbname);
@@ -42,9 +45,7 @@ class controllerAdmin extends fatherController
 		$block = $this->block;
 		$block->delete($table,$condition,$dbname);
 	}
-	function saveAfterEdit($name, $body, $condition, $dbname){
-		$this->block->saveAfterEdit($name, $body, $condition, $dbname);
-	}
+	
 	function search($string1, $column,$table,$dbname){
 		
 	}

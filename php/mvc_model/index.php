@@ -1,4 +1,4 @@
 <?php 
 
-header('Location: ../mvc_model/view/mainMenu.html');
+header('Location: ../mvc_model/view/productManager.php');
  ?>

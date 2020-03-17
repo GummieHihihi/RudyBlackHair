@@ -21,6 +21,7 @@ class controllerReal
 
 	function actionhandler($action){
 		if($action =='addrequest'){
+
 			$this->block->render_layout_add();
 		}
 		else if($action =='add'){
@@ -45,7 +46,9 @@ class controllerReal
 			}
 		}
 		else if ($action =='delete'){
+
 			if(isset($_POST['deleteThis'])){
+
 				$deleteid = $_GET['id'];
 				$this->controller->delete( "product", " productID = $deleteid", $this->dbname);
 				$this->controller->displayAll("product", $this->dbname);
@@ -62,31 +65,12 @@ class controllerReal
 				$this->controller->displayAll("product", $this->dbname);
 			}
 		}
-		else if(isset($_POST['searchRequest'])){
-			$this->block->render_layout_search();
-		}
-		else if(isset($_POST['searchProduct'])){
-			$searchname = $_POST['namesearch'];
-			$result = $controller->search($searchname, "productName", "product", $this->dbname);
-			echo "result found :" . $result;
-		}
-		else if($_GET['action']=='display_frontend'){
+		else if($action=='display_frontend'){
 			if(isset($_POST['displayfrontend'])){
 				$this->controller->display_frontend("product", $this->dbname);
 			}
 		}
 	}
 }
-$config = new config();
-$dbhost = $config->dbhost;
-$dbport = $config->dbport;
-$dbuser = $config->dbuser;
-$dbpassword = $config->dbpassword;
-$dbname = $config->dbname;
-$model = new Model($dbhost, $dbport, $dbuser, $dbpassword);
-$block = new Block($model);
-$controller = new controllerAdmin($block);
-$controllerReal = new controllerReal($model, $block,$controller,$dbname);
-$controllerReal->actionhandler($_GET['action']);
 
 ?>
