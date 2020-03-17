@@ -22,7 +22,7 @@ class Template
 		include('../template/add.php');
 	}
 	public function display_Frontend($row){
-		header('Location: ../front_end/demo_withProperties.php');
+		header('C:/xampp/htdocs/duong/php/mvc_model/front_end/demo_withProperties.php');
 	}
 }
 

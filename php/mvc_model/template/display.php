@@ -25,12 +25,19 @@ $row = $_SESSION['row'];
 					<td><?php echo $productName; ?></td>
 					<td><?php echo $productStatus; ?></td>
 					<td><img class = "img-respondsive" style="width:300px;height:300px;"src="../picture/<?php echo $Image; ?>"></td>
+
 					<form method = "post" action= "../Controller/Home_Controller.php?module=product&action=editrequest&id=<?php  echo $productId;?>">
 						
+
+					<form method = "post" action= "../product/editrequest/<?php  echo $productId;?>">
+
 						<td><button class="btn btn-primary" name = "editThis" > Edit </button></td>
-						
 					</form>
+
 					<form method = "post" action= "../Controller/Home_Controller.php?module=product&action=delete&id=<?php  echo $productId;?>">
+
+					<form method = "post" action= "../product/delete/<?php  echo $productId;?>">
+
 						<td><button class="btn btn-primary" name = "deleteThis" >Delete</button></td>
 					</form>
 				</tr>
