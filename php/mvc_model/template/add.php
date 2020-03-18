@@ -1,9 +1,5 @@
 	<center>
-
-		<form method="POST" enctype="multipart/form-data" action="../Controller/Home_Controller.php?module=product&action=add">
-
 		<form method="POST" enctype="multipart/form-data" action="../product/add">
-
 			<label for="fname">Product Name :</label><br>
 			<input type="text"' id="name" name="productName" value=''><br>
 			<label for='lname'>Product price:</label><br>

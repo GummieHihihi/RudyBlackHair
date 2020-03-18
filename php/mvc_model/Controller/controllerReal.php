@@ -19,7 +19,8 @@ class controllerReal
 		$this->dbname = $dbname;
 	}
 
-	function actionhandler($action){
+	function actionhandler($action,$id){
+		echo "in action handler" . $action;
 		if($action =='addrequest'){
 
 			$this->block->render_layout_add();
@@ -41,15 +42,15 @@ class controllerReal
 		}
 		else if($action =='editrequest'){
 			if(isset($_POST['editThis'])){
-				$productId = $_GET['id'];
+				$productId = $id;
 				$this->controller->displayedit($productId);
 			}
 		}
 		else if ($action =='delete'){
-
+			echo "in delete function";
 			if(isset($_POST['deleteThis'])){
 
-				$deleteid = $_GET['id'];
+				$deleteid = $id;
 				$this->controller->delete( "product", " productID = $deleteid", $this->dbname);
 				$this->controller->displayAll("product", $this->dbname);
 			}
@@ -59,7 +60,7 @@ class controllerReal
 				$name = $_POST['newname'];
 				$status = $_POST['newstatus'];
 				$img = $_FILES['newimage']['name'];
-				$editid = $_POST['editid'];
+				$editid = $id;
 
 				$this->controller->saveAfterEdit("product", "productName = '$name', productStatus = '$status', productimg = '$img'", "productID = $editid", $this->dbname);
 				$this->controller->displayAll("product", $this->dbname);

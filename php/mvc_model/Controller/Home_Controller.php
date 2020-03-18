@@ -6,7 +6,6 @@ include("../Controller/controllerAdmin.php");
 class Home_Controller
 {
 	public $action;
-
 	public function toModule($module){
 		if($module == "product"){
 			require_once('../Controller/controllerReal.php');
@@ -22,27 +21,12 @@ class Home_Controller
 			$block = new Block($model);
 			$controller = new controllerAdmin($block);
 			$controllerReal = new controllerReal($model, $block,$controller,$dbname);
-			$controllerReal->actionhandler($this->getAction());
+			$controllerReal->actionhandler($this->getAction(),$this->getID());
 		}
 		else{
 			echo "not right, the module is now :  " .$module;
 		}
 	}
-
-	function getUrl(){
-		$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-		var_dump(parse_url($url, PHP_URL_QUERY));
-		return $url;
-	}
-	function getparam(){
-		$module = $_GET['module'];
-		$action = $_GET['action'];
-		return "module = " . $module ." /". "action = " . $action;
-	}
-
-}
-$homecontroller = new Home_Controller();
-$homecontroller->toModule($_GET['module']);
 	function getModule(){
 		$data = $_SERVER['REQUEST_URI'];
 		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.php/', $data, 2)[1];
@@ -52,8 +36,26 @@ $homecontroller->toModule($_GET['module']);
 	function getAction(){
 		$data = $_SERVER['REQUEST_URI'];
 		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.php/', $data, 2)[1];
-		$action = explode('/',$mesage,2)[1];
+		$secondpart = explode('/',$mesage,2)[1];
+		if(strpos("/", $secondpart) !== false){
+			$id = explode('/',$secondpart)[1];
+		echo "id is : " .$id;
+		} else{
+			$id = "";
+		}
 		return $action;
+	}
+	function getID(){
+		$data = $_SERVER['REQUEST_URI'];
+		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.php/', $data, 2)[1];
+		$secondpart = explode('/',$mesage,2)[1];
+		if(strpos("/", $secondpart) !== false){
+			$id = explode('/',$secondpart)[1];
+		echo "id is : " .$id;
+		} else{
+			$id = "";
+		}
+		return $id;
 	}
 
 
@@ -61,6 +63,6 @@ $homecontroller->toModule($_GET['module']);
 $homecontroller = new Home_Controller();
 $module = $homecontroller->getModule();
 $action = $homecontroller->getAction();
-$homecontroller->toModule($module);
+$homecontroller->toModule($homecontroller->getModule());
 
 ?>

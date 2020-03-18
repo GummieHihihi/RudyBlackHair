@@ -21,24 +21,24 @@ class block extends fatherBlock
 	}
 
 	function render_layout_add(){
-		require_once('../view/productManager.php');
+		require_once('../view/header.php');
 		$this->template->add_layout();
 	}
 
 	function render_layout_edit($id){
-		require_once('../view/productManager.php');
+		require_once('../view/header.php');
 		$this->template->editform_layout($id);
 	}
 
 	function render_layout_search(){
-		require_once('../view/productManager.php');
+		require_once('../view/header.php');
 		$this->template->search_layout();
 	}
 	function displayAll($table, $dbname){
 		$model = $this->model;
 		$selectall = $model->selectAll($table, $dbname);
 		$row = $selectall -> fetch_all(MYSQLI_NUM);
-		include('../view/productManager.php');
+		include('../view/header.php');
 		$template = $this->template;
 		$template->display($row);
 	}
