@@ -37,11 +37,10 @@ class Home_Controller
 		$data = $_SERVER['REQUEST_URI'];
 		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.php/', $data, 2)[1];
 		$secondpart = explode('/',$mesage,2)[1];
-		if(strpos("/", $secondpart) !== false){
-			$id = explode('/',$secondpart)[1];
-		echo "id is : " .$id;
+		if(strpos($secondpart,'_') !== FALSE){
+			$action = explode('_',$secondpart)[0];
 		} else{
-			$id = "";
+			$action = $secondpart;
 		}
 		return $action;
 	}
@@ -49,9 +48,8 @@ class Home_Controller
 		$data = $_SERVER['REQUEST_URI'];
 		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.php/', $data, 2)[1];
 		$secondpart = explode('/',$mesage,2)[1];
-		if(strpos("/", $secondpart) !== false){
-			$id = explode('/',$secondpart)[1];
-		echo "id is : " .$id;
+		if(strpos($secondpart,'_') !== FALSE){
+			$id = explode('_',$secondpart)[1];
 		} else{
 			$id = "";
 		}
@@ -63,6 +61,7 @@ class Home_Controller
 $homecontroller = new Home_Controller();
 $module = $homecontroller->getModule();
 $action = $homecontroller->getAction();
+
 $homecontroller->toModule($homecontroller->getModule());
 
 ?>

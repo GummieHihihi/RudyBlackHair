@@ -20,21 +20,30 @@ class controllerReal
 	}
 
 	function actionhandler($action,$id){
-		echo "in action handler" . $action;
 		if($action =='addrequest'){
 
 			$this->block->render_layout_add();
 		}
-		else if($action =='add'){
+		else if($action =='add' || $action =='editthis'){
 			$productName = $_POST['productName'];
 			$productStatus = $_POST['productStatus'];
 			$img = $_FILES['image']['name'];
 			$img_temp = $_FILES['image']['tmp_name'];
 			$file_destination = 'C:/xampp/htdocs/duong/php/mvc_model/picture/' . $img;
 			move_uploaded_file($img_temp, $file_destination);
-			$this->controller->add("product(productName, productStatus, productimg)","'$productName', '$productStatus', '$img'",$this->dbname);
-			$this->controller->displayAll("product", $this->dbname);
+
+			if(isset($_POST['saveEdit'])){
+				$editid = $id;
+				$this->controller->saveAfterEdit("product", "productName = '$productName', productStatus = '$productStatus', productimg = '$img'", "productID = $editid", $this->dbname);
+				$this->controller->displayAll("product", $this->dbname);
+			}
+			else
+			if($id ==""){
+				$this->controller->add("product(productName, productStatus, productimg)","'$productName', '$productStatus', '$img'",$this->dbname);
+				$this->controller->displayAll("product", $this->dbname);
+			}
 		}
+
 		else if($action =='display'){
 			if(isset($_POST['displayAll'])){
 				$this->controller->displayall("product", $this->dbname);
@@ -47,7 +56,6 @@ class controllerReal
 			}
 		}
 		else if ($action =='delete'){
-			echo "in delete function";
 			if(isset($_POST['deleteThis'])){
 
 				$deleteid = $id;
@@ -55,19 +63,9 @@ class controllerReal
 				$this->controller->displayAll("product", $this->dbname);
 			}
 		}
-		else if($action =='editthis'){
-			if(isset($_POST['saveEdit'])){
-				$name = $_POST['newname'];
-				$status = $_POST['newstatus'];
-				$img = $_FILES['newimage']['name'];
-				$editid = $id;
-
-				$this->controller->saveAfterEdit("product", "productName = '$name', productStatus = '$status', productimg = '$img'", "productID = $editid", $this->dbname);
-				$this->controller->displayAll("product", $this->dbname);
-			}
-		}
-		else if($action=='display_frontend'){
+		else if($action=='displayfrontend'){
 			if(isset($_POST['displayfrontend'])){
+
 				$this->controller->display_frontend("product", $this->dbname);
 			}
 		}
