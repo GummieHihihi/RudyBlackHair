@@ -27,9 +27,9 @@ $productinfo = $productinfoquery->fetch_all();
 			?>
 			<form action="" id="form_input" method="post" enctype="multipart/form-data">
 				<label id="demoname">Product Old name : <?php echo $productName; ?><br>
-				Product Old price : <?php echo $productprice; ?>
-				<br>
-				Product Old img : <img class = "img-respondsive" style="width:300px;height:300px;" src="../picture/<?php echo $Image; ?>">
+					Product Old price : <?php echo $productprice; ?>
+					<br>
+					Product Old img : <img class = "img-respondsive" style="width:300px;height:300px;" src="../picture/<?php echo $Image; ?>">
 				</label>
 				<br>
 				<label for="fname">Product New Name :</label><br>
@@ -61,7 +61,18 @@ $productinfo = $productinfoquery->fetch_all();
         var filename = image.replace(/C:\\fakepath\\/, '');
         var editid = $("input[name='editid']").val();
         //Kiểm tra xem trường đã được nhập hay chưa
-        
+        if(name ==""){
+        	alert('please input name of the product');
+        	return false;
+        }
+        else if(price ==""){
+        	alert('please input price of the product');
+        	return false;
+        }
+        else if(image ==""){
+        	alert('please input image of the product');
+        	return false;
+        }
         //Lấy toàn bộ dữ liệu trong Form
         var data2 = "productName="+name+"&"+"productStatus="+price+"&"+"image="+filename+"&"+"editid="+editid;
         var data = $("form[id='form_input']").serialize();
@@ -76,10 +87,10 @@ $productinfo = $productinfoquery->fetch_all();
               {
               	if(data == 'false') 
               	{
-              		alert('Không có người dùng');
+              		alert('sai gif ddos');
               	}else{
               		const resultprint = document.getElementById("demoname");
- 					resultprint.innerHTML = data;
+              		resultprint.innerHTML = data;
               		console.log(data);
               	}
               }
