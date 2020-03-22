@@ -65,9 +65,7 @@ class controllerReal
 
 			}
 			else if($action=='displayFrontend'){
-				echo "string";
 				if(isset($_POST['displayFrontend'])){
-					echo "noe";
 					$this->controller->display_frontend("product", $this->dbname);
 				}
 				else{
