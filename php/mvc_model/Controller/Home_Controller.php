@@ -8,7 +8,8 @@ class Home_Controller
 	public $action;
 	public function toModule($module){
 		if($module == "product"){
-			require_once('../Controller/controllerReal.php');
+			
+			require_once('controllerReal.php');
 			require_once('../model/model.php');
 			require_once('../block/block.php');
 			$config = new config();
@@ -27,16 +28,27 @@ class Home_Controller
 			echo "not right, the module is now :  " .$module;
 		}
 	}
-	function getModule(){
+	function checkurl(){
 		$data = $_SERVER['REQUEST_URI'];
-		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.php/', $data, 2)[1];
-		$module = explode('/',$mesage,2)[0];
+		if($data === '/duong/php/mvc_model/Controller/Home_Controller.html/'){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+	function getModule(){
+
+		$data = $_SERVER['REQUEST_URI'];
+		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.html_', $data, 2)[1];
+		$module = explode('_',$mesage,2)[0];
 		return $module;
 	}
 	function getAction(){
 		$data = $_SERVER['REQUEST_URI'];
-		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.php/', $data, 2)[1];
-		$secondpart = explode('/',$mesage,2)[1];
+		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.html_', $data, 2)[1];
+		$secondpart = explode('_',$mesage,2)[1];
 		if(strpos($secondpart,'_') !== FALSE){
 			$action = explode('_',$secondpart)[0];
 		} else{
@@ -46,8 +58,8 @@ class Home_Controller
 	}
 	function getID(){
 		$data = $_SERVER['REQUEST_URI'];
-		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.php/', $data, 2)[1];
-		$secondpart = explode('/',$mesage,2)[1];
+		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.html_', $data, 2)[1];
+		$secondpart = explode('_',$mesage,2)[1];
 		if(strpos($secondpart,'_') !== FALSE){
 			$id = explode('_',$secondpart)[1];
 		} else{
@@ -61,7 +73,7 @@ class Home_Controller
 $homecontroller = new Home_Controller();
 $module = $homecontroller->getModule();
 $action = $homecontroller->getAction();
+$homecontroller->toModule($module);
 
-$homecontroller->toModule($homecontroller->getModule());
 
 ?>
