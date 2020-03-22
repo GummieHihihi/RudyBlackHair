@@ -1,5 +1,5 @@
 	<center>
-		<form method="POST" enctype="multipart/form-data" action="../product/add">
+		<form method="POST" enctype="multipart/form-data" action="Home_Controller.html_product_add">
 			<label for="fname">Product Name :</label><br>
 			<input type="text"' id="name" name="productName" value=''><br>
 			<label for='lname'>Product price:</label><br>
