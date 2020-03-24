@@ -1,3 +1,3 @@
 RewriteEngine On
 # redirect anything else to admin.php
-RewriteRule ^(.*)$ Home_Controller.php [QSA,L]
+RewriteRule ^(.*)$ controller_Module.php [QSA,L]

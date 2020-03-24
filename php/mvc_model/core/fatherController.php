@@ -12,8 +12,6 @@ abstract class fatherController{
 
 	abstract protected function displayMainMenu();
 
-	abstract protected function add($model, $block, $id);
-
 	abstract protected function displayall($table,$dbname);
 
 	abstract  protected function delete($id,$table, $dbname);

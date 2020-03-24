@@ -43,23 +43,28 @@ class block extends fatherBlock
 		$template->display($row);
 	}
 
-	function add($tablename, $body, $dbname){
-		$this->model->insertInto($tablename, $body, $dbname);
-	}
 
 	function delete($table,$condition,$dbname){
 		$this->model->delete($table,$condition,$dbname);
 	}
 
-	function saveAfterEdit($name, $body, $condition, $dbname){
-		$this->model-> update($name, $body, $condition, $dbname);
+	function addoredit($tablename, $body, $condition, $dbname){
+		if($condition != ""){
+			$this->model-> update($tablename, $body, $condition, $dbname);
+		}
+		else{
+			$this->model->insertInto($tablename, $body, $dbname);
+		}
 	}
 	function display_Frontend($table, $dbname){
 		$selectall = $this->model->selectAll($table, $dbname);
 		$row = $selectall -> fetch_all(MYSQLI_NUM);
 		$this->template->display_Frontend($row);
 	}
-	
+	function selectlatest($table, $orderBy, $dbname){
+		$select =  $this->model->selectlatest($table,$orderBy,$dbname);
+		return $select;
+	}
 }
 
 ?>
