@@ -1,10 +1,10 @@
 # RudyBlackHair
 
-- Khi chạy anh vào file model và chuyển các thông tin về db của anh trong file này ạ.
-trong bản này em đã thêm 1 số thay đổi sau ạ :
-1. đường dẫn link không sử dụng ? nữa mà sử dụng _
-2. thêm phần ajax vào phần edit, để load được thay đổi luôn trong trang edit chứ không cần load lại trang, dữ liệu nhận lại là kiểu html ạ 
-a lưu ý giúp em là file to nhất của anh anh đặt là "duong" nhé ạ
-cái thư mục to nhất mà chứa file php với readme ấy ạ
+em gửi anh bản code mới của em ạ, ngoài vấn đề về truy xuất kiểu "../template/..." em đã sửa hết mọi thứ khác theo cmt của anh ạ.
+Ngoài ra thì em cũng đã sửa gộp add với edit vào chung 1 cái từ template, controller, block,...,
+về chức năng add, sau khi add xong sẽ có thể edit thoải mái tiếp ạ, em xử dụng ajax để trả lại json ạ.
+em tự nhận bản code phần template edit code chưa được sạch lắm ạ tuy nhiên mai có thời gian em sẽ tu sửa cho code xanh xạch đẹp hơn ạ, tuy nhiên e thấy đã đáp ứng được mục tiêu của chức năng ạ
+phần edit bình thường vẫn sử dụng bình thường ạ, chung template với edit.
+em cũng đã sửa config khi nộp lên để máy a chạy được luôn không cần sửa config ạ
 
 Anh cho em xin góp ý với ạ, em cảm ơn a ạ
