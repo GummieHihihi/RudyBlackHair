@@ -11,9 +11,9 @@ class config
 	function __construct()
 	{
 		$this->dbhost = "localhost";
-		$this->dbport = 3306;
+		$this->dbport = 8889;
 		$this->dbuser = "root";
-		$this->dbpassword = "";
+		$this->dbpassword = "root";
 		$this->dbname = "admin";
 	}
 	function start(){
