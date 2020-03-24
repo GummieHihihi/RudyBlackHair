@@ -14,22 +14,15 @@ class controllerAdmin extends fatherController
 	//h
 	function start(){
 	}
-
 	function displayMainMenu(){
 		$block = $this->block;
 		$block->render_layout_main_menu();
 	}
-
 	function display_frontend($table, $dbname){
 		$this->block->display_Frontend($table, $dbname);
 	}
-
-	function add($tablename, $body, $dbname){
-		$block = $this->block;
-		$block->add($tablename, $body, $dbname);
-	}
-	function saveAfterEdit($name, $body, $condition, $dbname){
-		$this->block->saveAfterEdit($name, $body, $condition, $dbname);
+	function addoredit($name,$body,$condition,$dbname){
+		$this->block->addoredit($name, $body,$condition,$dbname);
 	}
 	function displayall($table, $dbname){
 		$block = $this->block;
@@ -45,10 +38,11 @@ class controllerAdmin extends fatherController
 		$block = $this->block;
 		$block->delete($table,$condition,$dbname);
 	}
-	
-	function search($string1, $column,$table,$dbname){
-		
+	function selectlatest($table,$orderBy,$dbname){
+		$select = $this->block->selectlatest($table,$orderBy,$dbname);
+		return $select;
 	}
+	
 }
 
 ?>

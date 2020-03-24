@@ -1,5 +1,6 @@
 <?php 
 require_once('../model/model.php');
+require_once('../model/config.php');
 $config = new config();
 $dbhost = $config->dbhost;
 $dbport = $config->dbport;

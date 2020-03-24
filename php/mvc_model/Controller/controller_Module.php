@@ -3,14 +3,14 @@ include("../Controller/controllerAdmin.php");
 /**
  * 
  */
-class Home_Controller
+class controller_Module
 {
 	public $action;
 	public function toModule($module){
 		if($module == "product"){
-			
-			require_once('controllerReal.php');
+			require_once('controller_Action.php');
 			require_once('../model/model.php');
+			require_once('../model/config.php');
 			require_once('../block/block.php');
 			$config = new config();
 			$dbhost = $config->dbhost;
@@ -21,33 +21,23 @@ class Home_Controller
 			$model = new Model($dbhost, $dbport, $dbuser, $dbpassword);
 			$block = new Block($model);
 			$controller = new controllerAdmin($block);
-			$controllerReal = new controllerReal($model, $block,$controller,$dbname);
-			$controllerReal->actionhandler($this->getAction(),$this->getID());
+			$controlleraction = new controllerAction($model, $block,$controller,$dbname);
+			$controlleraction->actionhandler($this->getAction());
 		}
 		else{
 			echo "not right, the module is now :  " .$module;
 		}
 	}
-	function checkurl(){
-		$data = $_SERVER['REQUEST_URI'];
-		if($data === '/duong/php/mvc_model/Controller/Home_Controller.html/'){
-			return true;
-		}
-		else{
-			return false;
-		}
-	}
-
 	function getModule(){
 
 		$data = $_SERVER['REQUEST_URI'];
-		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.html_', $data, 2)[1];
+		$mesage = explode('/duong/php/mvc_model/Controller/controller_Module.html_', $data, 2)[1];
 		$module = explode('_',$mesage,2)[0];
 		return $module;
 	}
 	function getAction(){
 		$data = $_SERVER['REQUEST_URI'];
-		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.html_', $data, 2)[1];
+		$mesage = explode('/duong/php/mvc_model/Controller/controller_Module.html_', $data, 2)[1];
 		$secondpart = explode('_',$mesage,2)[1];
 		if(strpos($secondpart,'_') !== FALSE){
 			$action = explode('_',$secondpart)[0];
@@ -56,23 +46,9 @@ class Home_Controller
 		}
 		return $action;
 	}
-	function getID(){
-		$data = $_SERVER['REQUEST_URI'];
-		$mesage = explode('/duong/php/mvc_model/Controller/Home_Controller.html_', $data, 2)[1];
-		$secondpart = explode('_',$mesage,2)[1];
-		if(strpos($secondpart,'_') !== FALSE){
-			$id = explode('_',$secondpart)[1];
-		} else{
-			$id = "";
-		}
-		return $id;
-	}
-
-
 }
-$homecontroller = new Home_Controller();
+$homecontroller = new controller_Module();
 $module = $homecontroller->getModule();
-$action = $homecontroller->getAction();
 $homecontroller->toModule($module);
 
 
