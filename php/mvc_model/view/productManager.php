@@ -178,26 +178,25 @@ $config->start();
 					<div class="row">
 						
 						<li class="col-md-3 col-sm-6 col-xs-6"> 
-							<form method="post" action="../Controller/controller_Module.html_product_display">
-								<button href="" type="submit" name="displayAll"> <b><font size="+1">Show all Products</font></b></button>
-							</form>
+							<button onclick="window.location.href='../Controller/controller_Module.html_product_display'" class="btn-primary">
+								Display all product
+							</button>
 						</li>
 						<li class="col-md-3 col-sm-6 col-xs-6"> 
-							<form method="post" action="../Controller/controller_Module.html_product_displayFrontend">
-								<button href="" type="submit" name="displayFrontend"> <b><font size="+1">Display front end</font></b></button>
-							</form>
+							<button onclick="window.location.href='../Controller/controller_Module.html_product_displayFrontend'" class="btn-primary">
+								display frontend
+							</button>
 						</li>
 						<li class="col-md-3 col-sm-6 col-xs-6">
-							<form method="post" action="../Controller/controller_Module.html_product_addrequest">
-								<input type="hidden" name="id" value="">
-								<button href="" type="submit" name="addRequest"> <b><font size="+1">Add a product</font></b></button>
-							</form>
+							<button method="post" onclick="window.location.href='../Controller/controller_Module.html_product_addrequest'" class="btn-primary">
+								Add a product
+							</button>
 						</li>
 						
 						<li class="col-md-3 col-sm-6 col-xs-6">
-							<form method="post" action="../Controller/controller_Module.php">
-								<button href="" type="submit" name="searchRequest"> <b><font size="+1">search For a Product</font></b></button>
-							</form>
+							<button method="post" onclick="window.location.href='../Controller/controller_Module.html_product_addrequest'" class="btn-primary">
+								Add a product
+							</button>
 						</li>
 					</div>
 					

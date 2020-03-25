@@ -21,7 +21,12 @@ class controllerAction
 
 	function actionhandler($action){
 		if($action =='addrequest' || $action == 'editrequest'){
-			$productId = $_POST['id'];
+			if(isset($_POST['id'])){
+				$productId = $_POST['id'];
+			}
+			else{
+				$productId = "";
+			}
 			$this->controller->displayedit($productId);
 		}
 		else if($action =='add' || $action =='editthis'){
@@ -69,12 +74,7 @@ class controllerAction
 			$this->controller->displayAll("product", $this->dbname);
 		}
 		else if($action=='displayFrontend'){
-			if(isset($_POST['displayFrontend'])){
-				$this->controller->display_frontend("product", $this->dbname);
-			}
-			else{
-				echo "not right";
-			}
+			$this->controller->display_frontend("product", $this->dbname);
 		}
 	}
 }

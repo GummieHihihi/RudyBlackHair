@@ -1,5 +1,6 @@
 <?php 
 require_once('../model/config.php');
+include('../helper/helper.php');
 $config = new config();
 $dbhost = $config->dbhost;
 $dbport = $config->dbport;
@@ -14,6 +15,8 @@ if($id != ""){
 else{
 	$productinfo = "";
 }
+$helper = new helper();
+$imagepath = $helper->getPath();
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,24 +29,22 @@ else{
 		<form action="" id="form_input" method="post" enctype="multipart/form-data">
 
 			<br>
-			<label for="fname">Product New Name :</label><br>
-			<input type="text" id="name" name="productName" value="">
+			<label for="fname">Product Name :</label><br>
+			<input type="text" id="name" name="productName" >
 			<br><br>
-			<label for="lname">Product New Price:</label><br>
-			<input type='number' id="status" name="productStatus" value=''><br><br>
+			<label for="lname">Product Price:</label><br>
+			<input type='number' id="price" name="productStatus" ><br><br>
 			<br>
-			<label for="lname">Product New image:</label><br>
-			<input type="file" id="image" name="image" value=""><br><br>
-			<input type="hidden" id="hiddenid" name="editid" value="<?php echo $id; ?>">
-			<div id="content"></div>
-			<button type="submit" style="margin-bottom: 20px;" value="Add this Product" class="btn btn-primary" id="editbutton" name="saveEdit">Edit this product</button>
-			<button type="submit" value="Add this Product" class="btn btn-primary" id="addbutton" name="add">Add this product</button>
-      <label id="currenstate"></label>
-			<label id="afteradd"></label>
-      <label id="afteradd_thenedit"></label>
+			<label for="lname">Product image:</label><br>
+      <img src="" id="currenimage" style="height: 300px; widows: 300px" alt="">
+      <input type="file" id="image" name="image" value="" accept="image/x-png,image/gif,image/jpeg"><br><br>
+      <input type="hidden" id="hiddenid" name="editid" value="<?php echo $id; ?>">
+      <div id="content"></div>
+      <button type="submit" style="margin-bottom: 20px;" value="Add this Product" class="btn btn-primary" id="editbutton" name="saveEdit">Edit this product</button>
+      <button type="submit" value="Add this Product" class="btn btn-primary" id="addbutton" name="add">Add this product</button>
       <br>
-      <img id ="currenimage" src="" style="height: 300px; widows: 300px">
-		</form>
+    </form>
+    <label id="status"></label>
   </center>
 
 </body>
@@ -59,29 +60,27 @@ if($productinfo != ""){
   $productprice = $value[2];
   $Image = $value[3];
   ?>
-  <center>
-    <label id="demoname">Product Old name : <?php echo $productName; ?><br>
-     Product Old price : <?php echo $productprice; ?>
-     <br>
-     Product Old img : <img class = "img-respondsive" style="width:300px;height:300px;" src="../picture/<?php echo $Image; ?>">
-   </label>
- </center>
- <script type="text/javascript">
+  <script type="text/javascript">
+    document.getElementById("status").style.display = "block";
    document.getElementById("addbutton").style.display = "none";
    document.getElementById("editbutton").style.display = "block";
+   document.getElementById("name").style.display = "block";
+   document.getElementById("name").value = "<?php echo $productName; ?>";
+   document.getElementById("price").value = "<?php echo $productprice; ?>";
+   document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + "<?php echo $Image; ?>";
+   document.getElementById("currenimage").alt = "<?php echo $Image; ?>";
  </script>
 
  <script type="text/javascript">
   //chi edit, khong qua add
-   $(document).ready(function()
-   {
+  $(document).ready(function()
+  {
       //khai báo biến submit form lấy đối tượng nút submit
       var edit = $("button[id='editbutton']");
       //khi nút submit được click
 
       edit.click(function()
       {
-      	alert("in save edit");
         //khai báo các biến dữ liệu gửi lên server
         var name = $("input[name='productName']").val(); //lấy giá trị trong input user
         var price = $("input[name='productStatus']").val();
@@ -103,7 +102,7 @@ if($productinfo != ""){
         }
         //Lấy toàn bộ dữ liệu trong Form
         var data2 = "productName="+name+"&"+"productStatus="+price+"&"+"image="+filename+"&"+"id="+editid;
-        console.log(data2);
+        form = document.getElementById("form_input");
         //Sử dụng phương thức Ajax.
         $.ajax({
               type : 'POST', //Sử dụng kiểu gửi dữ liệu POST
@@ -117,28 +116,23 @@ if($productinfo != ""){
               		alert('sai gif ddos');
               	}else{
               		console.log(response);
-                  const resultprint = document.getElementById("demoname");
-                  resultprint.style.display = "block";
                   var len = response.length;
+                  var status = document.getElementById("status");
                   for(var i=0; i<len; i++){
                     var id = response[i].id;
                     var name = response[i].name;
                     var price = response[i].price;
                     var image = response[i].image;
-
-                    var tr_str = "<tr>" +
-                    "<td align='center'>" + "the product name : " + name + "</td><br>" +
-                    "<td align='center'>" + "the product price : " + price + "</td><br>" +
-                    "<td align='center'>" + "the product image : " + "</td><br>" +
-                    "</tr>";
-                    document.getElementById("currenimage").src = "../picture/"+image;
-                    document.getElementById("currenimage").style.display = "block";
-                    resultprint.innerHTML = tr_str;
                     document.getElementById("hiddenid").value = id;
-                    document.getElementById("addbutton").style.display = "none";
-                    document.getElementById("editbutton").style.display = "block";
+                    document.getElementById("name").value = name;
+                    document.getElementById("price").value = price;
+                    document.getElementById("name").value = name;
+                    document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + image;
+                    document.getElementById("currenimage").alt = "<?php echo $Image; ?>";
+                    alert("đã update sản phẩm :" + " " + name);
+
                   }
-              	}
+                }
               }
             });
         return false;
@@ -156,7 +150,6 @@ if($productinfo ==""){
 	<script type="text/javascript">
 		document.getElementById("editbutton").style.display = "none";
 		document.getElementById("addbutton").style.display = "block";
-		document.getElementById("afteradd").style.display = "none";
     //code phan nut add
     $(document).ready(function()
     {
@@ -188,6 +181,7 @@ if($productinfo ==""){
         //Lấy toàn bộ dữ liệu trong Form
         var data2 = "productName="+name+"&"+"productStatus="+price+"&"+"image="+filename+"&"+"id="+editid;
         console.log(data2);
+
         //Sử dụng phương thức Ajax.
         $.ajax({
               type : 'POST', //Sử dụng kiểu gửi dữ liệu POST
@@ -201,26 +195,22 @@ if($productinfo ==""){
                   alert('sai gif ddos');
                 }else{
                   console.log("result : " + response);
-                  const resultprint = document.getElementById("afteradd");
-                  resultprint.style.display = "block";
+                  var status = document.getElementById("status");
                   var len = response.length;
                   for(var i=0; i<len; i++){
                     var id = response[i].id;
                     var name = response[i].name;
                     var price = response[i].price;
                     var image = response[i].image;
-
-                    var tr_str = "<tr>" +
-                    "<td align='center'>" + "the product name : " + name + "</td><br>" +
-                    "<td align='center'>" + "the product price : " + price + "</td><br>" +
-                    "<td align='center'>" + "the product image : " + "</td><br>" +
-                    "</tr>";
-                    document.getElementById("currenimage").src = "../picture/"+image;
-                    document.getElementById("currenimage").style.display = "block";
-                    resultprint.innerHTML =  tr_str;
                     document.getElementById("hiddenid").value = id;
+                    document.getElementById("name").value = name;
+                    document.getElementById("price").value = price;
+                    document.getElementById("name").value = name;
+                    document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + image;
+                    document.getElementById("currenimage").alt = "<?php echo $Image; ?>";
                     document.getElementById("addbutton").style.display = "none";
                     document.getElementById("editbutton").style.display = "block";
+                    alert("đã thêm sản phẩm :" + " " + name);
                   }
                 }
               }
@@ -273,27 +263,22 @@ if($productinfo ==""){
                   alert('sai gif ddos');
                 }else{
                   console.log("result : " + response);
-                  document.getElementById("afteradd").style.display = "none";
-                  const resultprint = document.getElementById("afteradd_thenedit");
-                  resultprint.style.display = "block";
                   var len = response.length;
                   for(var i=0; i<len; i++){
+                    var status = document.getElementById("status");
                     var idafteredit = response[i].id;
                     var nameafteredit = response[i].name;
                     var priceafteredit = response[i].price;
                     var imageafteredit = response[i].image;
-
-                    var tr_str = "<tr>" +
-                    "<td align='center'>" + "the product name : " + nameafteredit + "</td><br>" +
-                    "<td align='center'>" + "the product price : " + priceafteredit + "</td><br>" +
-                    "<td align='center'>" + "the product image : " + "</td><br>" +
-                    "</tr>";
-                    resultprint.innerHTML = tr_str;
-                    document.getElementById("currenimage").src = "../picture/"+imageafteredit;
-                    document.getElementById("currenimage").style.display = "block";
+                    var filename = imageafteredit.replace(/C:\\fakepath\\/, '');
                     document.getElementById("hiddenid").value = idafteredit;
+                    document.getElementById("name").value = nameafteredit;
+                    document.getElementById("price").value = priceafteredit;
+                    document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + imageafteredit;
+                    document.getElementById("currenimage").alt = "<?php echo $Image; ?>";
                     document.getElementById("addbutton").style.display = "none";
                     document.getElementById("editbutton").style.display = "block";
+                    alert("đã cập nhật sản phẩm :" + " " + name);
                   }
                 }
               }
