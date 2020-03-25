@@ -1,10 +1,15 @@
-# RudyBlackHair
+em gửi anh bản mới code của em ạ, hiện tại em đã có 1 số thay đổi theo góp ý của anh như sau ạ
 
-em gửi anh bản code mới của em ạ, ngoài vấn đề về truy xuất kiểu "../template/..." em đã sửa hết mọi thứ khác theo cmt của anh ạ.
-Ngoài ra thì em cũng đã sửa gộp add với edit vào chung 1 cái từ template, controller, block,...,
-về chức năng add, sau khi add xong sẽ có thể edit thoải mái tiếp ạ, em xử dụng ajax để trả lại json ạ.
-em tự nhận bản code phần template edit code chưa được sạch lắm ạ tuy nhiên mai có thời gian em sẽ tu sửa cho code xanh xạch đẹp hơn ạ, tuy nhiên e thấy đã đáp ứng được mục tiêu của chức năng ạ
-phần edit bình thường vẫn sử dụng bình thường ạ, chung template với edit.
-em cũng đã sửa config khi nộp lên để máy a chạy được luôn không cần sửa config ạ
+em đã đưa phần thông tin của sản phẩm trong edit vào trong các input để người dùng có thể input luôn.
 
-Anh cho em xin góp ý với ạ, em cảm ơn a ạ
+em đã sửa lại giao diện theo ý anh, phần file productManager em đã bỏ các form đi và thay hết bằng button
+
+em đã thêm phần helper, do đó các ảnh có thể chỉ tuyệt đối tới ảnh luôn ạ, anh chì cần vào phần helper chỉnh path theo máy anh ạ
+
+ngoài ra em cũng sửa lại file edit trong template cho đẹp hơn và dễ nhìn code ạ
+
+em cũng đã viết hết edit với add chung gộp với nhau rồi ạ
+
+hiện tại em còn 1 khó khăn đó là move-upload file vẫn chưa hoạt động do chưa bắt được tmp_name của file bên server ạ
+
+anh xem bài và cho em góp ý với ạ, tks a
