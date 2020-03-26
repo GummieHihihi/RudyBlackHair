@@ -1,15 +1,9 @@
-em gửi anh bản mới code của em ạ, hiện tại em đã có 1 số thay đổi theo góp ý của anh như sau ạ
+em gửi anh max bản sửa mới nhất của em ạ, trong đó em đã thực hiện các mục tiêu đề ra ạ, tuy không hoàn mĩ nhất nhưng em thấy nó cũng tròn vai ạ, trong đó em đã :
 
-em đã đưa phần thông tin của sản phẩm trong edit vào trong các input để người dùng có thể input luôn.
+- dùng chung tất cả mọi thứ cho add và edit ạ
+- sử dụng ajax để thay đổi edit, add, trong form add thì add xong edit tiếp tục mà không reload lại trang ạ
+- sau khi add có thể edit như thường ạ, cả edit và add dùng chung 1 template và kiểm soát bằng id ạ, nếu có id thì sẽ chỉ hiện phần add còn nếu chưa có thì chỉ hiện phần cho người dùng add ạ.
+- em đã thêm helper ạ để dẫn đường link tuyệt đối tới ảnh và thêm upload_file đến file cần chuyển ảnh vào ạ.\
+- để chạy code anh phần helper chỉnh lại cho em link path dẫn tới ảnh để hiển thị và path để chuyển ảnh vào khi chọn ảnh bất kì ạ.
 
-em đã sửa lại giao diện theo ý anh, phần file productManager em đã bỏ các form đi và thay hết bằng button
-
-em đã thêm phần helper, do đó các ảnh có thể chỉ tuyệt đối tới ảnh luôn ạ, anh chì cần vào phần helper chỉnh path theo máy anh ạ
-
-ngoài ra em cũng sửa lại file edit trong template cho đẹp hơn và dễ nhìn code ạ
-
-em cũng đã viết hết edit với add chung gộp với nhau rồi ạ
-
-hiện tại em còn 1 khó khăn đó là move-upload file vẫn chưa hoạt động do chưa bắt được tmp_name của file bên server ạ
-
-anh xem bài và cho em góp ý với ạ, tks a
+anh xem và cho em góp ý với ạ, tks a ạ
