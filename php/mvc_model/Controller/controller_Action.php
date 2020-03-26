@@ -33,19 +33,26 @@ class controllerAction
 			$editid = $_POST['id'];
 			$productName = $_POST['productName'];
 			$productStatus = $_POST['productStatus'];
-			$imagename = $_POST['image'];
+			$imagename = $_FILES['file']['name'];
+			$img_temp = $_FILES['file']['tmp_name'];
+			$filepath = $_POST['filepath'];
 			// truong hop id khac rong, chi edit
 			if($editid!=""){
 				$this->controller->addoredit("product", "productName = '$productName', productStatus = '$productStatus', productimg = '$imagename'", "productID = $editid", $this->dbname);
+				$file_destination = $filepath . $imagename;
+				move_uploaded_file($img_temp, $file_destination);
 				$return_arr = array();
 				$return_arr[] = array("id" => $editid,
 					"name" => $productName,
 					"price" => $productStatus,
-					"image" => $imagename);
+					"image" => $imagename
+				);
 				echo json_encode($return_arr);
 			}
 			// truong hop id = rong, tuc la add
 			else if($editid == ""){
+				$file_destination = $filepath . $imagename;
+				move_uploaded_file($img_temp, $file_destination);
 				$this->controller->addoredit("product(productName, productStatus, productimg)","'$productName', '$productStatus', '$imagename'","",$this->dbname);
 				$return_arr = array();
 				$select = $this->controller->selectlatest("product","productID",$this->dbname);

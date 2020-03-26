@@ -17,6 +17,7 @@ else{
 }
 $helper = new helper();
 $imagepath = $helper->getPath();
+$filepath = $helper->getPathImgTofolder();
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,19 +60,18 @@ if($productinfo != ""){
   $productName = $value[1];
   $productprice = $value[2];
   $Image = $value[3];
+  //che di cac thuoc
   ?>
   <script type="text/javascript">
-    document.getElementById("status").style.display = "block";
-   document.getElementById("addbutton").style.display = "none";
-   document.getElementById("editbutton").style.display = "block";
-   document.getElementById("name").style.display = "block";
-   document.getElementById("name").value = "<?php echo $productName; ?>";
-   document.getElementById("price").value = "<?php echo $productprice; ?>";
-   document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + "<?php echo $Image; ?>";
-   document.getElementById("currenimage").alt = "<?php echo $Image; ?>";
- </script>
+    document.getElementById("addbutton").style.display = "none";
+    document.getElementById("editbutton").style.display = "block";
+    document.getElementById("name").style.display = "block";
+    document.getElementById("name").value = "<?php echo $productName; ?>";
+    document.getElementById("price").value = "<?php echo $productprice; ?>";
+    document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + "<?php echo $Image; ?>";
+  </script>
 
- <script type="text/javascript">
+  <script type="text/javascript">
   //chi edit, khong qua add
   $(document).ready(function()
   {
@@ -82,11 +82,17 @@ if($productinfo != ""){
       edit.click(function()
       {
         //khai báo các biến dữ liệu gửi lên server
+        var file_data = $('#image').prop('files')[0];
+        var form_data = new FormData();
         var name = $("input[name='productName']").val(); //lấy giá trị trong input user
         var price = $("input[name='productStatus']").val();
-        var image = $('input[type="file"]').val();
-        var filename = image.replace(/C:\\fakepath\\/, '');
         var editid = $("input[name='editid']").val();
+        var filepath = "<?php echo $filepath; ?>";
+        form_data.append('filepath', filepath);
+        form_data.append('id', editid);
+        form_data.append("productName",name);
+        form_data.append("productStatus",price);
+        form_data.append('file', file_data);
         //Kiểm tra xem trường đã được nhập hay chưa
         if(name ==""){
         	alert('please input name of the product');
@@ -101,36 +107,37 @@ if($productinfo != ""){
         	return false;
         }
         //Lấy toàn bộ dữ liệu trong Form
-        var data2 = "productName="+name+"&"+"productStatus="+price+"&"+"image="+filename+"&"+"id="+editid;
-        form = document.getElementById("form_input");
         //Sử dụng phương thức Ajax.
         $.ajax({
               type : 'POST', //Sử dụng kiểu gửi dữ liệu POST
               url : 'controller_Module.html_product_editthis', //gửi dữ liệu sang trang data.php
-              data : data2, //dữ liệu sẽ được gửi
-              dataType : 'json',
+              dataType: 'json',
+              cache: false,
+              contentType: false,
+              processData: false,
+              data: form_data,
               success : function(response)  // Hàm thực thi khi nhận dữ liệu được từ server
               {
               	if(response == 'false') 
               	{
               		alert('sai gif ddos');
               	}else{
-              		console.log(response);
-                  var len = response.length;
+              		console.log("result : " + response);
                   var status = document.getElementById("status");
+                  var len = response.length;
                   for(var i=0; i<len; i++){
                     var id = response[i].id;
                     var name = response[i].name;
                     var price = response[i].price;
                     var image = response[i].image;
                     document.getElementById("hiddenid").value = id;
-                    document.getElementById("name").value = name;
                     document.getElementById("price").value = price;
                     document.getElementById("name").value = name;
                     document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + image;
-                    document.getElementById("currenimage").alt = "<?php echo $Image; ?>";
-                    alert("đã update sản phẩm :" + " " + name);
 
+                    document.getElementById("addbutton").style.display = "none";
+                    document.getElementById("editbutton").style.display = "block";
+                    alert("đã sua sản phẩm :" + " " + name);
                   }
                 }
               }
@@ -160,11 +167,17 @@ if($productinfo ==""){
       add.click(function()
       {
         //khai báo các biến dữ liệu gửi lên server
+        var file_data = $('#image').prop('files')[0];
+        var form_data = new FormData();
         var name = $("input[name='productName']").val(); //lấy giá trị trong input user
         var price = $("input[name='productStatus']").val();
-        var image = $('input[type="file"]').val();
-        var filename = image.replace(/C:\\fakepath\\/, '');
         var editid = $("input[name='editid']").val();
+        var filepath = "<?php echo $filepath; ?>";
+        form_data.append('filepath', filepath);
+        form_data.append('id', editid);
+        form_data.append("productName",name);
+        form_data.append("productStatus",price);
+        form_data.append('file', file_data);
         //Kiểm tra xem trường đã được nhập hay chưa
         if(name ==""){
           alert('please input name of the product');
@@ -179,15 +192,17 @@ if($productinfo ==""){
           return false;
         }
         //Lấy toàn bộ dữ liệu trong Form
-        var data2 = "productName="+name+"&"+"productStatus="+price+"&"+"image="+filename+"&"+"id="+editid;
-        console.log(data2);
+        
 
         //Sử dụng phương thức Ajax.
         $.ajax({
               type : 'POST', //Sử dụng kiểu gửi dữ liệu POST
               url : 'controller_Module.html_product_add', //gửi dữ liệu sang trang data.php
-              data : data2, //dữ liệu sẽ được gửi
-              dataType : 'json',
+              dataType: 'json',
+              cache: false,
+              contentType: false,
+              processData: false,
+              data: form_data,
               success : function(response)  // Hàm thực thi khi nhận dữ liệu được từ server
               {
                 if(response == 'false') 
@@ -195,7 +210,6 @@ if($productinfo ==""){
                   alert('sai gif ddos');
                 }else{
                   console.log("result : " + response);
-                  var status = document.getElementById("status");
                   var len = response.length;
                   for(var i=0; i<len; i++){
                     var id = response[i].id;
@@ -207,7 +221,7 @@ if($productinfo ==""){
                     document.getElementById("price").value = price;
                     document.getElementById("name").value = name;
                     document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + image;
-                    document.getElementById("currenimage").alt = "<?php echo $Image; ?>";
+
                     document.getElementById("addbutton").style.display = "none";
                     document.getElementById("editbutton").style.display = "block";
                     alert("đã thêm sản phẩm :" + " " + name);
@@ -223,17 +237,23 @@ if($productinfo ==""){
     $(document).ready(function()
     {
       //khai báo biến submit form lấy đối tượng nút submit
-      var add = $("button[id='editbutton']");
+      var edit = $("button[id='editbutton']");
       //khi nút submit được click
 
-      add.click(function()
+      edit.click(function()
       {
         //khai báo các biến dữ liệu gửi lên server
+        var file_data = $('#image').prop('files')[0];
+        var form_data = new FormData();
         var name = $("input[name='productName']").val(); //lấy giá trị trong input user
         var price = $("input[name='productStatus']").val();
-        var image = $('input[type="file"]').val();
-        var filename = image.replace(/C:\\fakepath\\/, '');
         var editid = $("input[name='editid']").val();
+        var filepath = "<?php echo $filepath; ?>";
+        form_data.append('filepath', filepath);
+        form_data.append('id', editid);
+        form_data.append("productName",name);
+        form_data.append("productStatus",price);
+        form_data.append('file', file_data);
         //Kiểm tra xem trường đã được nhập hay chưa
         if(name ==""){
           alert('please input name of the product');
@@ -248,14 +268,16 @@ if($productinfo ==""){
           return false;
         }
         //Lấy toàn bộ dữ liệu trong Form
-        var data2 = "productName="+name+"&"+"productStatus="+price+"&"+"image="+filename+"&"+"id="+editid;
-        console.log(data2);
+
         //Sử dụng phương thức Ajax.
         $.ajax({
               type : 'POST', //Sử dụng kiểu gửi dữ liệu POST
-              url : 'controller_Module.html_product_editthis', //gửi dữ liệu sang trang data.php
-              data : data2, //dữ liệu sẽ được gửi
-              dataType : 'json',
+              url : 'controller_Module.html_product_add', //gửi dữ liệu sang trang data.php
+              dataType: 'json',
+              cache: false,
+              contentType: false,
+              processData: false,
+              data: form_data,
               success : function(response)  // Hàm thực thi khi nhận dữ liệu được từ server
               {
                 if(response == 'false') 
@@ -265,20 +287,22 @@ if($productinfo ==""){
                   console.log("result : " + response);
                   var len = response.length;
                   for(var i=0; i<len; i++){
-                    var status = document.getElementById("status");
-                    var idafteredit = response[i].id;
-                    var nameafteredit = response[i].name;
-                    var priceafteredit = response[i].price;
-                    var imageafteredit = response[i].image;
-                    var filename = imageafteredit.replace(/C:\\fakepath\\/, '');
-                    document.getElementById("hiddenid").value = idafteredit;
-                    document.getElementById("name").value = nameafteredit;
-                    document.getElementById("price").value = priceafteredit;
-                    document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + imageafteredit;
-                    document.getElementById("currenimage").alt = "<?php echo $Image; ?>";
+                    console.log(response);
+                    alert("ok day");
                     document.getElementById("addbutton").style.display = "none";
                     document.getElementById("editbutton").style.display = "block";
-                    alert("đã cập nhật sản phẩm :" + " " + name);
+                    var len = response.length;
+                    for(var i=0; i<len; i++){
+                      var id = response[i].id;
+                      var name = response[i].name;
+                      var price = response[i].price;
+                      var image = response[i].image;
+                      document.getElementById("hiddenid").value = id;
+                    document.getElementById("name").value = name;
+                    document.getElementById("price").value = price;
+                    document.getElementById("name").value = name;
+                    document.getElementById("currenimage").src = "<?php echo $imagepath ?>" + image;
+                    }
                   }
                 }
               }
