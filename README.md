@@ -1,9 +1,9 @@
-em gửi anh max bản sửa mới nhất của em ạ, trong đó em đã thực hiện các mục tiêu đề ra ạ, tuy không hoàn mĩ nhất nhưng em thấy nó cũng tròn vai ạ, trong đó em đã :
+em gửi anh Robert bản sửa mới nhất của em ạ
 
-- dùng chung tất cả mọi thứ cho add và edit ạ
-- sử dụng ajax để thay đổi edit, add, trong form add thì add xong edit tiếp tục mà không reload lại trang ạ
-- sau khi add có thể edit như thường ạ, cả edit và add dùng chung 1 template và kiểm soát bằng id ạ, nếu có id thì sẽ chỉ hiện phần add còn nếu chưa có thì chỉ hiện phần cho người dùng add ạ.
-- em đã thêm helper ạ để dẫn đường link tuyệt đối tới ảnh và thêm upload_file đến file cần chuyển ảnh vào ạ.\
-- để chạy code anh phần helper chỉnh lại cho em link path dẫn tới ảnh để hiển thị và path để chuyển ảnh vào khi chọn ảnh bất kì ạ.
+1 số lưu ý của em khi chạy ạ : 
+- anh vào file config rồi sửa giúp em các thông tin về db cho giống với máy và cổng db của anh ạ
+- em còn bug chỗ đường dẫn tuyệt đối trong helper ạ nên có thể n sẽ không hiển thị ảnh ạ, tuy nhiên với máy e thì chạy ok ạ.
+- Đây là bản cuối cùng em nộp cho a Max ạ và a Max bảo giữ nguyên cho anh xem nên em chưa sửa lỗi dẫn đường Link tuyệt đối trong helper ạ.
+- về phần ajax thì viết trong file edit ở template. Function vẫn hoạt động ổn ạ tuy nhiên em nhận thấy viết chưa được gọn và tối ưu lắm ạ
 
 anh xem và cho em góp ý với ạ, tks a ạ
